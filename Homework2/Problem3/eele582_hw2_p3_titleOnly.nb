@@ -1,0 +1,62 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1346,         54]
+NotebookOptionsPosition[       950,         35]
+NotebookOutlinePosition[      1298,         50]
+CellTagsIndexPosition[      1255,         47]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["EELE 582 Optical Design", "Section",
+ CellChangeTimes->{{3.694471403333933*^9, 3.694471412971484*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Homework 2", "Subsection",
+ CellChangeTimes->{{3.6944714167477007`*^9, 3.6944714325136023`*^9}}],
+
+Cell["Problem 3", "Subsubsection",
+ CellChangeTimes->{{3.6945612952882643`*^9, 3.6945612984504447`*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{775, 873},
+WindowMargins->{{459, Automatic}, {-8, Automatic}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 108, 1, 70, "Section"],
+Cell[CellGroupData[{
+Cell[713, 27, 102, 1, 49, "Subsection"],
+Cell[818, 30, 104, 1, 39, "Subsubsection"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
