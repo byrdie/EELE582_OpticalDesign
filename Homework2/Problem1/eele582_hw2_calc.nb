@@ -10,20 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9462,        305]
-NotebookOptionsPosition[      8438,        265]
-NotebookOutlinePosition[      8786,        280]
-CellTagsIndexPosition[      8743,        277]
+NotebookDataLength[      9392,        304]
+NotebookOptionsPosition[      8370,        264]
+NotebookOutlinePosition[      8718,        279]
+CellTagsIndexPosition[      8675,        276]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData[
- RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]], "Input",
- CellChangeTimes->{{3.6944560691859035`*^9, 3.694456069223669*^9}}],
 
 Cell[CellGroupData[{
-
 Cell["EELE582 Optical Design", "Section",
  CellChangeTimes->{{3.6944541373803844`*^9, 3.69445414519079*^9}}],
 
@@ -40,6 +36,9 @@ Cell["Problem 1", "Subsubsection",
 Cell["A system with two lenses has the equalities", "Text",
  CellChangeTimes->{{3.6944541831542997`*^9, 3.694454219963892*^9}, {
   3.694455523478181*^9, 3.694455538198741*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]], "Input"],
 
 Cell[BoxData[{
  RowBox[{
@@ -264,7 +263,7 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{759, 833},
-WindowMargins->{{Automatic, 362}, {Automatic, 44}},
+WindowMargins->{{Automatic, 295}, {-8, Automatic}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -279,30 +278,30 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 141, 2, 30, "Input"],
 Cell[CellGroupData[{
-Cell[724, 26, 108, 1, 70, "Section"],
+Cell[580, 22, 108, 1, 70, "Section"],
 Cell[CellGroupData[{
-Cell[857, 31, 98, 1, 49, "Subsection"],
+Cell[713, 27, 98, 1, 49, "Subsection"],
 Cell[CellGroupData[{
-Cell[980, 36, 102, 1, 39, "Subsubsection"],
-Cell[1085, 39, 176, 2, 30, "Text"],
-Cell[1264, 43, 1673, 48, 206, "Input"],
-Cell[2940, 93, 196, 4, 30, "Text"],
-Cell[3139, 99, 835, 22, 108, "Input"],
-Cell[3977, 123, 100, 1, 30, "Text"],
+Cell[836, 32, 102, 1, 39, "Subsubsection"],
+Cell[941, 35, 176, 2, 30, "Text"],
+Cell[1120, 39, 73, 1, 30, "Input"],
+Cell[1196, 42, 1673, 48, 206, "Input"],
+Cell[2872, 92, 196, 4, 30, "Text"],
+Cell[3071, 98, 835, 22, 108, "Input"],
+Cell[3909, 122, 100, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[4102, 128, 340, 9, 30, "Input"],
-Cell[4445, 139, 1677, 52, 137, "Output"]
+Cell[4034, 127, 340, 9, 30, "Input"],
+Cell[4377, 138, 1677, 52, 80, "Output"]
 }, Open  ]],
-Cell[6137, 194, 128, 1, 30, "Text"],
+Cell[6069, 193, 128, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[6290, 199, 1019, 27, 138, "Input"],
-Cell[7312, 228, 96, 1, 30, "Output"]
+Cell[6222, 198, 1019, 27, 138, "Input"],
+Cell[7244, 227, 96, 1, 30, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7445, 234, 97, 1, 30, "Input"],
-Cell[7545, 237, 841, 22, 38, "Output"]
+Cell[7377, 233, 97, 1, 30, "Input"],
+Cell[7477, 236, 841, 22, 38, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
