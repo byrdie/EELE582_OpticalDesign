@@ -1,0 +1,921 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     29051,        913]
+NotebookOptionsPosition[     25230,        776]
+NotebookOutlinePosition[     25576,        791]
+CellTagsIndexPosition[     25533,        788]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+EELE 582 Optical Design
+Homework 3\
+\>", "Chapter",
+ CellChangeTimes->{{3.6954945874191055`*^9, 3.6954946037366147`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1", "Section",
+ CellChangeTimes->{{3.695494614109413*^9, 3.6954946164807177`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Start by clearing all variables in the Mathematica kernel", \
+"Subsubsection",
+ CellChangeTimes->{{3.695494623761617*^9, 3.695494664246871*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.694473399160088*^9, 3.6944733991680884`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Save the radius of curvature for each lens to memory", "Subsubsection",
+ CellChangeTimes->{{3.6954947151472745`*^9, 3.695494737705447*^9}, {
+  3.69549487937176*^9, 3.695494903492135*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"R1", "=", 
+   RowBox[{"49.414", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"R2", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"-", "57.069"}], 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"R3", "=", 
+   RowBox[{"\[Infinity]", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"R4", "=", 
+   RowBox[{
+    RowBox[{"-", "49.188"}], 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"R5", "=", 
+   RowBox[{
+    RowBox[{"-", "160.303"}], 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6954947450380716`*^9, 3.695494756719138*^9}, {
+  3.6954947976114473`*^9, 3.695494858663097*^9}, {3.6954949488360415`*^9, 
+  3.695494952366205*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Save the thickness of each surface to memory", "Subsubsection",
+ CellChangeTimes->{{3.695494908263254*^9, 3.6954949171825943`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t1", "=", 
+   RowBox[{"5.951", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t2", "=", 
+   RowBox[{"0.5", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t3", "=", 
+   RowBox[{"2.675", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t4", "=", 
+   RowBox[{"4.0", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t5", "=", 
+   RowBox[{"88.380", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6954949191531067`*^9, 3.6954949911533794`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Save the index of refraction of each surface to memory", "Subsubsection",
+ CellChangeTimes->{{3.695495000009036*^9, 3.6954950184885607`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"n0", "=", "1.0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n1", "=", "1.5168"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n2", "=", " ", "1.0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n3", "=", "1.0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n4", "=", "1.7174"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n5", "=", "1.0"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6954950333451715`*^9, 3.6954950773273926`*^9}, {
+  3.6954951197999907`*^9, 3.695495147901132*^9}, {3.695496138699191*^9, 
+  3.6954961445238256`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Find the optical power of each surface from the above parameters\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6954963279109697`*^9, 3.695496354372384*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Phi]", "[", 
+   RowBox[{"n_", ",", "np_", ",", " ", "C_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"np", "-", "n"}], ")"}], "C"}]}]], "Input",
+ CellChangeTimes->{{3.695496355847683*^9, 3.695496397302539*^9}, 
+   3.6954964424812846`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Phi]1", "=", 
+   RowBox[{"\[Phi]", "[", 
+    RowBox[{"n0", ",", "n1", ",", 
+     RowBox[{"1", "/", "R1"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]2", "=", 
+   RowBox[{"\[Phi]", "[", 
+    RowBox[{"n1", ",", "n2", ",", 
+     RowBox[{"1", "/", "R2"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]3", "=", 
+   RowBox[{"\[Phi]", "[", 
+    RowBox[{"n2", ",", "n3", ",", 
+     RowBox[{"1", "/", "R3"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]4", "=", 
+   RowBox[{"\[Phi]", "[", 
+    RowBox[{"n3", ",", "n4", ",", 
+     RowBox[{"1", "/", "R4"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]5", "=", 
+   RowBox[{"\[Phi]", "[", 
+    RowBox[{"n4", ",", "n5", ",", 
+     RowBox[{"1", "/", "R5"}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6954964064136143`*^9, 3.695496427627366*^9}, {
+  3.6954964627260137`*^9, 3.6954965793457737`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Save the clear semi-diameter of each surface into memory", \
+"Subsubsection",
+ CellChangeTimes->{{3.6954957706756964`*^9, 3.695495787143581*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"sd1", "=", 
+   RowBox[{"16.0", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sd2", "=", 
+   RowBox[{"16.0", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sd3", "=", 
+   RowBox[{"12.0", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sd4", "=", 
+   RowBox[{"16.0", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sd5", "=", 
+   RowBox[{"16.0", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.695495792560629*^9, 3.6954958580182114`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Define the paraxial ray trace equations", "Subsubsection",
+ CellChangeTimes->{{3.6954953256562986`*^9, 3.6954953350139933`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"PRTE1", "[", 
+   RowBox[{"n_", ",", "np_", ",", "u_", ",", "y_", ",", "\[Phi]_"}], "]"}], 
+  " ", ":=", " ", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"n", " ", "u"}], " ", "-", " ", 
+    RowBox[{"y", " ", "\[Phi]"}]}], "np"]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"PRTE2", "[", 
+   RowBox[{"y_", ",", "u_", ",", "t_"}], "]"}], ":=", 
+  RowBox[{"y", " ", "+", " ", 
+   RowBox[{"u", " ", "t"}]}]}]}], "Input",
+ CellChangeTimes->{{3.6954961556693616`*^9, 3.6954961579255805`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Establish the initial conditions for the marginal and chief rays. Since the \
+height of the marginal ray is unknown, it will be left as a variable. \
+Additionally, the entrance angle of the chief ray is unknown, so it will be \
+also left as a variable.\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6954954539508605`*^9, 3.695495460070258*^9}, {
+  3.695495516289714*^9, 3.6954955412431154`*^9}, {3.695495959917039*^9, 
+  3.6954959867515764`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"yM0", ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uM0", " ", "=", " ", "0.0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"yC0", ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uC0", "=", 
+   RowBox[{"\[Pi]", "/", "180"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6954955864080067`*^9, 3.6954957400427313`*^9}, {
+  3.69549599080722*^9, 3.6954959932859387`*^9}, {3.6954978692129426`*^9, 
+  3.6954978790684423`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Use the first PRTE to find the angle of both rays after the first surface\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.695496026987321*^9, 3.695496061897696*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"uM1", "=", 
+  RowBox[{
+   RowBox[{"PRTE1", "[", 
+    RowBox[{"n0", ",", "n1", ",", "uM0", ",", "yM0", ",", "\[Phi]1"}], "]"}], 
+   "//", "FullSimplify"}]}], "\[IndentingNewLine]", 
+ RowBox[{"uC1", "=", 
+  RowBox[{
+   RowBox[{"PRTE1", "[", 
+    RowBox[{"n0", ",", "n1", ",", "uC0", ",", "yC0", ",", "\[Phi]1"}], "]"}], 
+   "//", "FullSimplify"}]}]}], "Input",
+ CellChangeTimes->{{3.6954961003525877`*^9, 3.695496106721707*^9}, {
+  3.695496163823846*^9, 3.695496185563697*^9}, {3.695496588588713*^9, 
+  3.695496634024954*^9}, {3.695497382194258*^9, 3.6954973838001204`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"yM0", " ", 
+  RowBox[{"(", 
+   TemplateBox[{
+    RowBox[{"-", "0.006895157234347736`"}],
+     RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+     "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+    "QuantityPostfix"], ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.6954966344594374`*^9, 3.6954973441544466`*^9, 3.6954973865732036`*^9, 
+   3.6954978294999456`*^9, {3.695497882876526*^9, 3.6954978988534956`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.011506653823802278`", "\[VeryThinSpace]", "+", 
+  RowBox[{"yC0", " ", 
+   RowBox[{"(", 
+    TemplateBox[{
+     RowBox[{"-", "0.006895157234347736`"}],
+      RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+      "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+     "QuantityPostfix"], ")"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.6954966344594374`*^9, 3.6954973441544466`*^9, 3.6954973865732036`*^9, 
+   3.6954978294999456`*^9, {3.695497882876526*^9, 3.695497898953543*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Use the second PRTE to find the ray heights before the second surface\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.695496646187196*^9, 3.6954966586349764`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"yM1", "=", 
+  RowBox[{
+   RowBox[{"PRTE2", "[", 
+    RowBox[{"yM0", ",", "uM1", ",", "t1"}], "]"}], "//", 
+   "FullSimplify"}]}], "\[IndentingNewLine]", 
+ RowBox[{"yC1", "=", 
+  RowBox[{
+   RowBox[{"PRTE2", "[", 
+    RowBox[{"yC0", ",", "uC1", ",", "t1"}], "]"}], "//", 
+   "FullSimplify"}]}]}], "Input",
+ CellChangeTimes->{{3.6954966759702215`*^9, 3.6954967511935315`*^9}, {
+  3.6954978129164176`*^9, 3.6954978209546423`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.9589669192983966`", " ", "yM0"}]], "Output",
+ CellChangeTimes->{
+  3.695496757048919*^9, 3.6954973442064466`*^9, 3.695497386593204*^9, {
+   3.6954978212540264`*^9, 3.6954978295159445`*^9}, {3.6954978829965253`*^9, 
+   3.695497898965498*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"0.9589669192983966`", " ", "yC0"}], "+", 
+  TemplateBox[{
+   "0.06847609690544736`","\"mm\"","millimeters","\"Millimeters\""},
+   "Quantity"]}]], "Output",
+ CellChangeTimes->{
+  3.695496757048919*^9, 3.6954973442064466`*^9, 3.695497386593204*^9, {
+   3.6954978212540264`*^9, 3.6954978295159445`*^9}, {3.6954978829965253`*^9, 
+   3.695497898989496*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Find the ray angles after the second surface", "Subsubsection",
+ CellChangeTimes->{{3.6954968239338665`*^9, 3.6954968309612274`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"uM2", "=", 
+  RowBox[{
+   RowBox[{"PRTE1", "[", 
+    RowBox[{"n1", ",", "n2", ",", "uM1", ",", "yM1", ",", "\[Phi]2"}], "]"}], 
+   "//", "FullSimplify"}]}], "\[IndentingNewLine]", 
+ RowBox[{"uC2", "=", 
+  RowBox[{
+   RowBox[{"PRTE1", "[", 
+    RowBox[{"n1", ",", "n2", ",", "uC1", ",", "yC1", ",", "\[Phi]2"}], "]"}], 
+   "//", "FullSimplify"}]}]}], "Input",
+ CellChangeTimes->{{3.6954968408373528`*^9, 3.6954968668778696`*^9}, {
+  3.695497301969678*^9, 3.695497310593938*^9}}],
+
+Cell[BoxData[
+ RowBox[{"yM0", " ", 
+  RowBox[{"(", 
+   TemplateBox[{
+    RowBox[{"-", "0.01914269553764347`"}],
+     RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+     "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+    "QuantityPostfix"], ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.6954968696582427`*^9, 3.695497344362447*^9, 3.695497386693205*^9, 
+   3.695497829659948*^9, {3.6954978831045275`*^9, 3.695497899069499*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.016833193221186787`", "\[VeryThinSpace]", "+", 
+  RowBox[{"yC0", " ", 
+   RowBox[{"(", 
+    TemplateBox[{
+     RowBox[{"-", "0.01914269553764347`"}],
+      RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+      "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+     "QuantityPostfix"], ")"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.6954968696582427`*^9, 3.695497344362447*^9, 3.695497386693205*^9, 
+   3.695497829659948*^9, {3.6954978831045275`*^9, 3.6954978994015255`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Find the ray heights before the third surface", "Subsubsection",
+ CellChangeTimes->{{3.6954968813434486`*^9, 3.695496891223013*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"yM2", "=", 
+  RowBox[{
+   RowBox[{"PRTE2", "[", 
+    RowBox[{"yM1", ",", "uM2", ",", "t2"}], "]"}], "//", 
+   "FullSimplify"}]}], "\[IndentingNewLine]", 
+ RowBox[{"yC2", "=", 
+  RowBox[{
+   RowBox[{"PRTE2", "[", 
+    RowBox[{"yC1", ",", "uC2", ",", "t2"}], "]"}], "//", 
+   "FullSimplify"}]}]}], "Input",
+ CellChangeTimes->{{3.6954969097311964`*^9, 3.695496931215988*^9}, {
+  3.6954973130973825`*^9, 3.6954973149943132`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.9493955715295749`", " ", "yM0"}]], "Output",
+ CellChangeTimes->{
+  3.695496932161295*^9, 3.695497344478446*^9, 3.6954973867252054`*^9, 
+   3.695497829691945*^9, {3.6954978834268885`*^9, 3.6954978994174957`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"0.9493955715295749`", " ", "yC0"}], "+", 
+  TemplateBox[{
+   "0.07689269351604075`","\"mm\"","millimeters","\"Millimeters\""},
+   "Quantity"]}]], "Output",
+ CellChangeTimes->{
+  3.695496932161295*^9, 3.695497344478446*^9, 3.6954973867252054`*^9, 
+   3.695497829691945*^9, {3.6954978834268885`*^9, 3.695497899445509*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Find the ray angles after the third surface", "Subsubsection",
+ CellChangeTimes->{{3.69549693741127*^9, 3.6954969444658422`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"uM3", "=", 
+  RowBox[{
+   RowBox[{"PRTE1", "[", 
+    RowBox[{"n2", ",", "n3", ",", "uM2", ",", "yM2", ",", "\[Phi]3"}], "]"}], 
+   "//", "FullSimplify"}]}], "\[IndentingNewLine]", 
+ RowBox[{"uC3", "=", 
+  RowBox[{
+   RowBox[{"PRTE1", "[", 
+    RowBox[{"n2", ",", "n3", ",", "uC2", ",", "yC2", ",", "\[Phi]3"}], "]"}], 
+   "//", "FullSimplify"}]}]}], "Input",
+ CellChangeTimes->{{3.6954969576910233`*^9, 3.6954969788594675`*^9}, {
+  3.6954973177724795`*^9, 3.6954973189984617`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"yM0", " ", 
+  RowBox[{"(", 
+   TemplateBox[{
+    RowBox[{"-", "0.01914269553764347`"}],
+     RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+     "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+    "QuantityPostfix"], ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.6954969853716125`*^9, 3.6954973446296167`*^9, 3.6954973868852053`*^9, 
+   3.695497829843948*^9, {3.695497883502888*^9, 3.6954978995054955`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.016833193221186787`", "\[VeryThinSpace]", "+", 
+  RowBox[{"yC0", " ", 
+   RowBox[{"(", 
+    TemplateBox[{
+     RowBox[{"-", "0.01914269553764347`"}],
+      RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+      "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+     "QuantityPostfix"], ")"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.6954969853716125`*^9, 3.6954973446296167`*^9, 3.6954973868852053`*^9, 
+   3.695497829843948*^9, {3.695497883502888*^9, 3.695497899605507*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Find the ray heights before the fourth surface", "Subsubsection",
+ CellChangeTimes->{{3.6954969956826224`*^9, 3.6954970045904956`*^9}, {
+  3.6954970533937545`*^9, 3.6954970560763006`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"yM3", "=", 
+  RowBox[{
+   RowBox[{"PRTE2", "[", 
+    RowBox[{"yM2", ",", "uM3", ",", "t3"}], "]"}], "//", 
+   "FullSimplify"}]}], "\[IndentingNewLine]", 
+ RowBox[{"yC3", "=", 
+  RowBox[{
+   RowBox[{"PRTE2", "[", 
+    RowBox[{"yC2", ",", "uC3", ",", "t3"}], "]"}], "//", 
+   "FullSimplify"}]}]}], "Input",
+ CellChangeTimes->{{3.6954970697967925`*^9, 3.6954970982762403`*^9}, {
+  3.69549732192385*^9, 3.6954973233958445`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.8981888609663786`", " ", "yM0"}]], "Output",
+ CellChangeTimes->{
+  3.6954970992975783`*^9, 3.695497344643753*^9, 3.695497386901206*^9, 
+   3.695497829859947*^9, {3.695497883617417*^9, 3.695497899621496*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"0.8981888609663786`", " ", "yC0"}], "+", 
+  TemplateBox[{
+   "0.12192148538271541`","\"mm\"","millimeters","\"Millimeters\""},
+   "Quantity"]}]], "Output",
+ CellChangeTimes->{
+  3.6954970992975783`*^9, 3.695497344643753*^9, 3.695497386901206*^9, 
+   3.695497829859947*^9, {3.695497883617417*^9, 3.6954978996495094`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Find the ray angles after the fourth surface", "Subsubsection",
+ CellChangeTimes->{{3.695497105488248*^9, 3.695497112663881*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"uM4", "=", 
+  RowBox[{
+   RowBox[{"PRTE1", "[", 
+    RowBox[{"n3", ",", "n4", ",", "uM3", ",", "yM3", ",", "\[Phi]4"}], "]"}], 
+   "//", "FullSimplify"}]}], "\[IndentingNewLine]", 
+ RowBox[{"uC4", "=", 
+  RowBox[{
+   RowBox[{"PRTE1", "[", 
+    RowBox[{"n3", ",", "n4", ",", "uC3", ",", "yC3", ",", "\[Phi]4"}], "]"}], 
+   "//", "FullSimplify"}]}]}], "Input",
+ CellChangeTimes->{{3.6954971363687615`*^9, 3.695497158581467*^9}, {
+  3.6954973264763136`*^9, 3.695497329181904*^9}}],
+
+Cell[BoxData[
+ RowBox[{"yM0", " ", 
+  RowBox[{"(", 
+   TemplateBox[{
+    RowBox[{"-", "0.0035185387548134434`"}],
+     RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+     "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+    "QuantityPostfix"], ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.6954971621548843`*^9, 3.6954973448222075`*^9, 3.695497387081205*^9, 
+   3.6954978300319557`*^9, {3.6954978837549148`*^9, 3.6954978997734957`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.010836963307489617`", "\[VeryThinSpace]", "+", 
+  RowBox[{"yC0", " ", 
+   RowBox[{"(", 
+    TemplateBox[{
+     RowBox[{"-", "0.0035185387548134434`"}],
+      RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+      "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+     "QuantityPostfix"], ")"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.6954971621548843`*^9, 3.6954973448222075`*^9, 3.695497387081205*^9, 
+   3.6954978300319557`*^9, {3.6954978837549148`*^9, 3.6954979000794487`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Find the ray heights before the fifth surface", "Subsubsection",
+ CellChangeTimes->{{3.695497167706342*^9, 3.695497177976046*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"yM4", "=", 
+  RowBox[{
+   RowBox[{"PRTE2", "[", 
+    RowBox[{"yM3", ",", "uM4", ",", "t4"}], "]"}], "//", 
+   "FullSimplify"}]}], "\[IndentingNewLine]", 
+ RowBox[{"yC4", "=", 
+  RowBox[{
+   RowBox[{"PRTE2", "[", 
+    RowBox[{"yC3", ",", "uC4", ",", "t4"}], "]"}], "//", 
+   "FullSimplify"}]}]}], "Input",
+ CellChangeTimes->{{3.695497197114833*^9, 3.695497211845597*^9}, {
+  3.6954973325095944`*^9, 3.6954973338229933`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.8841147059471248`", " ", "yM0"}]], "Output",
+ CellChangeTimes->{
+  3.695497213201991*^9, 3.6954973448902073`*^9, 3.6954973871092043`*^9, 
+   3.6954978300657763`*^9, {3.695497884253416*^9, 3.6954979000934877`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"0.8841147059471248`", " ", "yC0"}], "+", 
+  TemplateBox[{
+   "0.16526933861267387`","\"mm\"","millimeters","\"Millimeters\""},
+   "Quantity"]}]], "Output",
+ CellChangeTimes->{
+  3.695497213201991*^9, 3.6954973448902073`*^9, 3.6954973871092043`*^9, 
+   3.6954978300657763`*^9, {3.695497884253416*^9, 3.695497900121385*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Find the ray angles after the fifth surface", "Subsubsection",
+ CellChangeTimes->{{3.695497231254348*^9, 3.695497240192773*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"uM5", "=", 
+  RowBox[{
+   RowBox[{"PRTE1", "[", 
+    RowBox[{"n4", ",", "n5", ",", "uM4", ",", "yM4", ",", "\[Phi]5"}], "]"}], 
+   "//", "FullSimplify"}]}], "\[IndentingNewLine]", 
+ RowBox[{"uC5", "=", 
+  RowBox[{
+   RowBox[{"PRTE1", "[", 
+    RowBox[{"n4", ",", "n5", ",", "uC4", ",", "yC4", ",", "\[Phi]5"}], "]"}], 
+   "//", "FullSimplify"}]}]}], "Input",
+ CellChangeTimes->{{3.6954972637998*^9, 3.695497289331571*^9}, {
+  3.6954973392489805`*^9, 3.6954973408897977`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"yM0", " ", 
+  RowBox[{"(", 
+   TemplateBox[{
+    RowBox[{"-", "0.009999394852259483`"}],
+     RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+     "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+    "QuantityPostfix"], ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.6954972901695676`*^9, 3.695497345158931*^9, 3.6954973872982645`*^9, 
+   3.695497830241156*^9, {3.6954978843814464`*^9, 3.695497900225385*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.017871775053505748`", "\[VeryThinSpace]", "+", 
+  RowBox[{"yC0", " ", 
+   RowBox[{"(", 
+    TemplateBox[{
+     RowBox[{"-", "0.009999394852259483`"}],
+      RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+      "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+     "QuantityPostfix"], ")"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.6954972901695676`*^9, 3.695497345158931*^9, 3.6954973872982645`*^9, 
+   3.695497830241156*^9, {3.6954978843814464`*^9, 3.6954979005613856`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Find the initial height of the marginal ray be constraining it to barely \
+clear the aperture stop at Surface 3.\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6954974438491163`*^9, 3.6954975139172134`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"sol1", "=", 
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{"yM2", "\[Equal]", " ", "sd3"}], ",", " ", "yM0"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"yM0", " ", "=", " ", 
+  RowBox[{"sol1", "[", 
+   RowBox[{"[", 
+    RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.6954975300725975`*^9, 3.6954975819755073`*^9}, {
+  3.695497632843037*^9, 3.6954976635056*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"12.63962078595622`","\"mm\"","millimeters","\"Millimeters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.695497587703059*^9, {3.6954976355556192`*^9, 3.695497664113598*^9}, 
+   3.6954978303611546`*^9, {3.6954978847574463`*^9, 3.695497900621385*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Find the initial angle of the chief ray by constraining it to have zero \
+height at the plane of the aperture stop.\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.695497671945025*^9, 3.695497705364763*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sol2", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"yC2", "\[Equal]", 
+     RowBox[{"0", 
+      TemplateBox[{
+       InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+        "\"Millimeters\""},
+       "Quantity"]}]}], ",", " ", "yC0"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6954977150388637`*^9, 3.695497762316473*^9}, {
+  3.695497893929293*^9, 3.695497894686322*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"yC0", "\[Rule]", 
+    TemplateBox[{
+     RowBox[{"-", "0.08099120727112581`"}],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.69549776397824*^9, 3.695497830392932*^9, {3.695497884913414*^9, 
+   3.6954979006893845`*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{748, 948},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 131, 4, 123, "Chapter"],
+Cell[CellGroupData[{
+Cell[736, 30, 96, 1, 70, "Section"],
+Cell[CellGroupData[{
+Cell[857, 35, 150, 2, 39, "Subsubsection"],
+Cell[1010, 39, 141, 2, 30, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1188, 46, 193, 2, 39, "Subsubsection"],
+Cell[1384, 50, 1357, 41, 126, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2778, 96, 137, 1, 39, "Subsubsection"],
+Cell[2918, 99, 1173, 36, 126, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4128, 140, 147, 1, 39, "Subsubsection"],
+Cell[4278, 143, 610, 15, 126, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4925, 163, 165, 3, 39, "Subsubsection"],
+Cell[5093, 168, 288, 8, 30, "Input"],
+Cell[5384, 178, 982, 27, 107, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6403, 210, 151, 2, 39, "Subsubsection"],
+Cell[6557, 214, 1174, 36, 126, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7768, 255, 134, 1, 39, "Subsubsection"],
+Cell[7905, 258, 520, 14, 74, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8462, 277, 455, 8, 95, "Subsubsection"],
+Cell[8920, 287, 450, 10, 88, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9407, 302, 172, 3, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[9604, 309, 597, 13, 50, "Input"],
+Cell[10204, 324, 450, 10, 38, "Output"],
+Cell[10657, 336, 517, 11, 38, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11223, 353, 170, 3, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[11418, 360, 452, 12, 50, "Input"],
+Cell[11873, 374, 267, 5, 30, "Output"],
+Cell[12143, 381, 387, 9, 38, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12579, 396, 139, 1, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[12743, 401, 502, 12, 50, "Input"],
+Cell[13248, 415, 443, 10, 38, "Output"],
+Cell[13694, 427, 514, 11, 38, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14257, 444, 138, 1, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[14420, 449, 450, 12, 50, "Input"],
+Cell[14873, 463, 237, 4, 30, "Output"],
+Cell[15113, 469, 355, 8, 38, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15517, 483, 135, 1, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[15677, 488, 506, 12, 50, "Input"],
+Cell[16186, 502, 447, 10, 38, "Output"],
+Cell[16636, 514, 514, 11, 38, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17199, 531, 194, 2, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[17418, 537, 449, 12, 50, "Input"],
+Cell[17870, 551, 233, 4, 30, "Output"],
+Cell[18106, 557, 355, 8, 38, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18510, 571, 135, 1, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[18670, 576, 502, 12, 50, "Input"],
+Cell[19175, 590, 451, 10, 38, "Output"],
+Cell[19629, 602, 520, 11, 38, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20198, 619, 136, 1, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[20359, 624, 448, 12, 50, "Input"],
+Cell[20810, 638, 239, 4, 30, "Output"],
+Cell[21052, 644, 357, 8, 38, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21458, 658, 134, 1, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[21617, 663, 500, 12, 50, "Input"],
+Cell[22120, 677, 446, 10, 38, "Output"],
+Cell[22569, 689, 517, 11, 38, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23135, 706, 215, 4, 67, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[23375, 714, 451, 12, 50, "Input"],
+Cell[23829, 728, 286, 5, 38, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24164, 739, 214, 4, 67, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[24403, 747, 424, 11, 34, "Input"],
+Cell[24830, 760, 348, 10, 38, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
