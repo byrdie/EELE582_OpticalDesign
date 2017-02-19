@@ -1,0 +1,52 @@
+-Calculate the curvature of the lens using equation given in class.
+
+ZEMAX
+
+-In the Aperature section of the System Explorer, 
+--set the aperature type to be Image Space F/# (LEARNED)
+--Set the aperature value to 15
+--This should allow the Clear Semi-Dia of the surfaces to float according to F/#.
+
+-In the Fields section of the System Explorer
+--Keep Field 1 at the default values
+--Activate and set the Y-value of Field 2 to be 10.5
+--Activate and set the Y-value of Field 3 to be 15.0
+--This configuration will allow us to compare the RMS spot sizes to the targets given by Geary.
+
+-In the Wavelengths section of the System Explorer
+--Set Wavelength 1 to 0.587 um.
+
+
+-In the Lens Data Editor
+--Enter a dummy surface to see the incoming rays (LEARNED), with a thickness of 30mm.
+---In the Draw section of the Surface 1 properties we check 'Do Not Draw This Surface'.
+----This will allow us to see the incoming rays without the confusion of a surface.
+
+--Set the front of the lens to positive curvature, BK7 glass and a thickness of 4mm
+---Set the curvature ot the lens to be a variable
+
+--Set the back of the lens to negative curvature and have the thickness be f/2 (50mm)
+---Set the curvature and thickness of the lens to be a variable
+
+--Set the thickness of the Stop to solve for the marginal ray height and set this height to be 0.
+---This should place the image plane in the location of the paraxial focus.
+---There should be and `M' next to the thickness value.
+
+--Create a dummy image surface with the thickness initally set to zero and set as a variable
+---This will allow the optimizer to incorporate defocus from the paraxial focus
+---In the Surface 5 Properties check 'Do Not Draw This Surface' and 'Skip Rays To This Surface'.
+----This is to avoid cluttering the layout with rays extending beyond the image plane
+
+-In the layout we should see the two lens surfaces overlappingterawave
+
+
+-In the Merit Function Editor
+--Use the optimization wizard to set the Type to RMS and the Reference to Centroid.
+--Add the EFFL operand with a Target of 100 and a weight of 1
+---This will set the effective focal length to 100mm.
+--Add the MXCA operand, set Surf1 and Surf2 to 3 (the back of the lens), and set the Target to 100 and the weight to 1.0
+--Add the MNCA operand, set Surf1 and Surf2 to 3 (the back of the lens), and set the Target to 0.0 and the weight to 1.0
+---This allows the stop to float anywhere between the back of the lens to the image plane.
+
+-Optimize the layout, and the result should be a meniscus shaped lens with the stop about 10mm from the back of the lens.
+
