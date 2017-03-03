@@ -1,0 +1,250 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7075,        242]
+NotebookOptionsPosition[      5870,        193]
+NotebookOutlinePosition[      6218,        208]
+CellTagsIndexPosition[      6175,        205]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Roy Smart
+EELE 582 Optical Design
+Homework 6\
+\>", "Section",
+ CellChangeTimes->{{3.6962689308833857`*^9, 3.696268974727561*^9}, {
+  3.6975156055580044`*^9, 3.697515605617008*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1.", "Subsection",
+ CellChangeTimes->{{3.6962689959836707`*^9, 3.6962690015922155`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Calculate the initial radii of curvature of our transmission sphere. We are \
+given the parameters\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6962690044830303`*^9, 3.696269078403223*^9}, {
+  3.6975156099072533`*^9, 3.697515623971058*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"diam", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"4", 
+      TemplateBox[{
+       InterpretationBox["\[InvisibleSpace]", 1],"\"in\"","inches",
+        "\"Inches\""},
+       "Quantity"]}], ",", 
+     TemplateBox[{
+      InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+       "\"Millimeters\""},
+      "Quantity"]}], "]"}], "//", "N"}]}]], "Input",
+ CellChangeTimes->{{3.697516015825471*^9, 3.6975161078047314`*^9}, {
+  3.6975161905294633`*^9, 3.6975162167459626`*^9}, {3.6975162469136877`*^9, 
+  3.6975163049260063`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"101.6`","\"mm\"","millimeters","\"Millimeters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.697516317263712*^9, 3.6975163550768747`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"tAir", " ", "=", "  ", 
+  RowBox[{
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"0.2", 
+      TemplateBox[{
+       InterpretationBox["\[InvisibleSpace]", 1],"\"in\"","inches",
+        "\"Inches\""},
+       "Quantity"]}], ",", 
+     TemplateBox[{
+      InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+       "\"Millimeters\""},
+      "Quantity"]}], "]"}], "//", "N"}]}]], "Input",
+ CellChangeTimes->{{3.697516015825471*^9, 3.6975161078047314`*^9}, {
+  3.6975161905294633`*^9, 3.6975162167459626`*^9}, {3.6975162469136877`*^9, 
+  3.697516308878232*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"5.08`","\"mm\"","millimeters","\"Millimeters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.6975163172917137`*^9, 3.697516355117877*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"tGlass", " ", "=", "  ", 
+  RowBox[{
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"0.5", 
+      TemplateBox[{
+       InterpretationBox["\[InvisibleSpace]", 1],"\"in\"","inches",
+        "\"Inches\""},
+       "Quantity"]}], ",", 
+     TemplateBox[{
+      InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+       "\"Millimeters\""},
+      "Quantity"]}], "]"}], "//", "N"}]}]], "Input",
+ CellChangeTimes->{{3.697516015825471*^9, 3.6975161078047314`*^9}, {
+  3.6975161905294633`*^9, 3.6975162167459626`*^9}, {3.6975162469136877`*^9, 
+  3.6975163116613913`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"12.7`","\"mm\"","millimeters","\"Millimeters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.6975163173417163`*^9, 3.6975163551748805`*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"fNum", " ", "=", " ", "7.8"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n", " ", "=", " ", "1.5168"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.697516015825471*^9, 3.6975161078047314`*^9}, {
+  3.6975161905294633`*^9, 3.6975162167459626`*^9}, {3.6975162469136877`*^9, 
+  3.69751633366365*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EFL", " ", "=", " ", 
+  RowBox[{"fNum", " ", "diam"}]}]], "Input",
+ CellChangeTimes->{{3.697516015825471*^9, 3.6975161078047314`*^9}, {
+   3.6975161905294633`*^9, 3.6975162167459626`*^9}, {3.6975162469136877`*^9, 
+   3.697516314454551*^9}, 3.697516347727454*^9}],
+
+Cell[BoxData[
+ TemplateBox[{"792.4799999999999`","\"mm\"","millimeters","\"Millimeters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.6975160757188964`*^9, 3.6975160817182393`*^9}, 
+   3.697516196701816*^9, 3.697516262624587*^9, {3.697516295008439*^9, 
+   3.6975163173597174`*^9}, 3.6975163551948814`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Since our initial lens is equiconvex, we may use the following relation for \
+the radius of curvature of both surfaces\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6962692209090395`*^9, 3.696269248586209*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"R1", " ", "=", " ", 
+  RowBox[{"2", 
+   RowBox[{"(", 
+    RowBox[{"n", "-", "1"}], ")"}], " ", "EFL"}]}]], "Input",
+ CellChangeTimes->{{3.6962692848304777`*^9, 3.696269291235359*^9}, 
+   3.6962693775029964`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{"819.1073279999998`","\"mm\"","millimeters","\"Millimeters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.696269291764671*^9, 3.6962693778809934`*^9, 
+  3.696532667672701*^9, 3.697516317382719*^9, 3.697516355207882*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"R2", " ", "=", " ", 
+  RowBox[{"-", "R1"}]}]], "Input",
+ CellChangeTimes->{{3.6962693798373547`*^9, 3.6962693827617483`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  RowBox[{"-", "819.1073279999998`"}],"\"mm\"","millimeters",
+   "\"Millimeters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.6962693833081217`*^9, 3.696532667804441*^9, 
+  3.697516317394719*^9, 3.6975163552188826`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{775, 833},
+WindowMargins->{{351, Automatic}, {62, Automatic}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 190, 6, 152, "Section"],
+Cell[CellGroupData[{
+Cell[795, 32, 102, 1, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[922, 37, 250, 5, 67, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[1197, 46, 605, 16, 40, "Input"],
+Cell[1805, 64, 171, 3, 38, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2013, 72, 606, 16, 40, "Input"],
+Cell[2622, 90, 170, 3, 38, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2829, 98, 610, 16, 40, "Input"],
+Cell[3442, 116, 172, 3, 38, "Output"]
+}, Open  ]],
+Cell[3629, 122, 338, 7, 50, "Input"],
+Cell[CellGroupData[{
+Cell[3992, 133, 286, 5, 30, "Input"],
+Cell[4281, 140, 311, 5, 38, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4641, 151, 219, 4, 67, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[4885, 159, 235, 6, 30, "Input"],
+Cell[5123, 167, 252, 4, 38, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5412, 176, 149, 3, 30, "Input"],
+Cell[5564, 181, 254, 6, 71, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
