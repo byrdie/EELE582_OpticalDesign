@@ -1,0 +1,158 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4006,        150]
+NotebookOptionsPosition[      3179,        114]
+NotebookOutlinePosition[      3519,        129]
+CellTagsIndexPosition[      3476,        126]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Roy Smart
+EELE 582 Optical Design
+Homework 4\
+\>", "Section",
+ CellChangeTimes->{{3.6962689308833857`*^9, 3.696268974727561*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1.", "Subsection",
+ CellChangeTimes->{{3.6962689959836707`*^9, 3.6962690015922155`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Calculate the initial radii of curvature of our landscape lens. We are given \
+the parameters\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6962690044830303`*^9, 3.696269078403223*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"EFL", " ", "=", " ", 
+   RowBox[{"100", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fnum", " ", "=", " ", "15"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Da", " ", "=", " ", 
+  RowBox[{"N", "[", 
+   RowBox[{"EFL", " ", "/", " ", "fnum"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n", " ", "=", " ", "1.5168"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.69626908992721*^9, 3.696269196516034*^9}, {
+  3.6962695375581846`*^9, 3.6962695452175493`*^9}, {3.696532658995661*^9, 
+  3.6965326600642548`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"6.666666666666667`","\"mm\"","millimeters","\"Millimeters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.696269205196753*^9, 3.696269545518096*^9, 
+  3.696532667432289*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Since our initial lens is equiconvex, we may use the following relation for \
+the radius of curvature of both surfaces\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6962692209090395`*^9, 3.696269248586209*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"R1", " ", "=", " ", 
+  RowBox[{"2", 
+   RowBox[{"(", 
+    RowBox[{"n", "-", "1"}], ")"}], " ", "EFL"}]}]], "Input",
+ CellChangeTimes->{{3.6962692848304777`*^9, 3.696269291235359*^9}, 
+   3.6962693775029964`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{"103.35999999999999`","\"mm\"","millimeters","\"Millimeters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.696269291764671*^9, 3.6962693778809934`*^9, 
+  3.696532667672701*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"R2", " ", "=", " ", 
+  RowBox[{"-", "R1"}]}]], "Input",
+ CellChangeTimes->{{3.6962693798373547`*^9, 3.6962693827617483`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  RowBox[{"-", "103.35999999999999`"}],"\"mm\"","millimeters",
+   "\"Millimeters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.6962693833081217`*^9, 3.696532667804441*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{775, 833},
+WindowMargins->{{914, Automatic}, {70, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 139, 5, 137, "Section"],
+Cell[CellGroupData[{
+Cell[744, 31, 102, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[871, 36, 194, 4, 59, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[1090, 44, 693, 17, 102, "Input"],
+Cell[1786, 63, 206, 4, 34, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2041, 73, 219, 4, 59, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[2285, 81, 235, 6, 32, "Input"],
+Cell[2523, 89, 209, 4, 34, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2769, 98, 149, 3, 32, "Input"],
+Cell[2921, 103, 206, 5, 34, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
