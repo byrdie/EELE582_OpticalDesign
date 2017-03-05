@@ -1,0 +1,26 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{siunitx}
+
+\usepackage{float}
+\usepackage{subcaption}
+
+\title{EELE 582 Optical Design \\ Homework 5 \\ Optimizing a Transmission Sphere }
+\author{Roy Smart}
+\begin{document}
+	
+\maketitle	
+
+
+
+\begin{tabular}{c c}
+	\includegraphics[trim={1cm 10cm 40cm 10cm}, clip,width=0.4\linewidth]{../zemax/1_oneElement/1_initial/layout.png} & \\
+	\includegraphics[trim={0.1cm 10cm 40cm 10cm}, clip,width=0.4\linewidth]{../zemax/1_oneElement/2_optimize_RMS/layout.png} & \\		
+\end{tabular}
+
+\end{document}

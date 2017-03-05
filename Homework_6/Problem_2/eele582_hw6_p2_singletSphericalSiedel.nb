@@ -1,0 +1,522 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15446,        514]
+NotebookOptionsPosition[     13151,        425]
+NotebookOutlinePosition[     13492,        440]
+CellTagsIndexPosition[     13449,        437]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+EELE 582 Optical Design
+Roy Smart
+Homework 6\
+\>", "Chapter",
+ CellChangeTimes->{{3.697665291422435*^9, 3.697665310664441*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2", "Section",
+ CellChangeTimes->{{3.697665320156721*^9, 3.697665321299642*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Part 1.", "Subsection",
+ CellChangeTimes->{{3.697666676059314*^9, 3.697666677437462*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["The values from the raytrace computed in Homework 2 are", \
+"Subsubsection",
+ CellChangeTimes->{{3.6976653268837957`*^9, 3.697665339348844*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"y", " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"20", 
+     TemplateBox[{
+      InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+       "\"Millimeters\""},
+      "Quantity"]}], ",", 
+    TemplateBox[{
+     "19.933854008500557`","\"mm\"","millimeters","\"Millimeters\""},
+     "Quantity"], ",", 
+    TemplateBox[{"0.`","\"mm\"","millimeters","\"Millimeters\""},
+     "Quantity"]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"u", " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{"0", ",", 
+    RowBox[{
+     RowBox[{"-", "0.947471536156563"}], " ", "Degree"}], ",", 
+    RowBox[{
+     RowBox[{"-", "2.868747410153588"}], " ", "Degree"}]}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"c", " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"1", "/", 
+     TemplateBox[{"0.41187089946115746`","\"m\"","meters","\"Meters\""},
+      "Quantity"]}], ",", " ", 
+    RowBox[{"1", "/", 
+     TemplateBox[{
+      RowBox[{"-", "0.41187089946115746`"}],"\"m\"","meters","\"Meters\""},
+      "Quantity"]}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nA", " ", "=", " ", "1.0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nG", " ", "=", " ", "1.516824"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6975115622391443`*^9, 3.6975115816389627`*^9}, {
+  3.697511624351227*^9, 3.697511688119865*^9}, {3.697512040938139*^9, 
+  3.6975121173571568`*^9}, {3.69751218974157*^9, 3.697512195270801*^9}, {
+  3.697665175864418*^9, 3.697665177362584*^9}, {3.697665758182415*^9, 
+  3.697665764657732*^9}, {3.6976658015755453`*^9, 3.697665875962688*^9}, {
+  3.6976659737172813`*^9, 3.697665982257909*^9}, {3.69766618919315*^9, 
+  3.697666194922839*^9}, {3.697666288622007*^9, 3.697666292624951*^9}, {
+  3.697666489098604*^9, 3.697666507604701*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"20","\"mm\"","millimeters","\"Millimeters\""},
+    "Quantity"], ",", 
+   TemplateBox[{
+    "19.933854008500557`","\"mm\"","millimeters","\"Millimeters\""},
+    "Quantity"], ",", 
+   TemplateBox[{"0.`","\"mm\"","millimeters","\"Millimeters\""},
+    "Quantity"]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.697666292954967*^9, 3.6976665110714817`*^9, {3.6976666166480293`*^9, 
+   3.6976666247551126`*^9}, 3.697666655059609*^9, 3.697668369568128*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", 
+   RowBox[{"-", "0.016536497874860525`"}], ",", 
+   RowBox[{"-", "0.05006908771524032`"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.697666292954967*^9, 3.6976665110714817`*^9, {3.6976666166480293`*^9, 
+   3.6976666247551126`*^9}, 3.697666655059609*^9, 3.697668369755321*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{
+    "2.4279452646649236`",
+     RowBox[{"\"per \"", "\[InvisibleSpace]", "\"meter\""}],
+     "reciprocal meters",FractionBox["1", "\"Meters\""]},
+    "Quantity"], ",", 
+   TemplateBox[{
+    RowBox[{"-", "2.4279452646649236`"}],
+     RowBox[{"\"per \"", "\[InvisibleSpace]", "\"meter\""}],
+     "reciprocal meters",FractionBox["1", "\"Meters\""]},
+    "Quantity"]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.697666292954967*^9, 3.6976665110714817`*^9, {3.6976666166480293`*^9, 
+   3.6976666247551126`*^9}, 3.697666655059609*^9, 3.697668369842545*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Define a set of functions to compute Siedel coefficients", \
+"Subsubsection",
+ CellChangeTimes->{{3.697665343974606*^9, 3.6976653557677727`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"A", "[", 
+   RowBox[{"n1_", ",", "u1_", ",", "y_", ",", "c_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"n1", 
+   RowBox[{"(", 
+    RowBox[{"u1", "+", 
+     RowBox[{"y", " ", "c"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[CapitalDelta]", "[", 
+   RowBox[{"u2_", ",", "n2_", ",", "u1_", ",", "n1_"}], "]"}], ":=", " ", 
+  RowBox[{
+   FractionBox["u2", "n2"], "-", 
+   FractionBox["u1", "n1"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SI", "[", 
+   RowBox[{"u2_", ",", "n2_", ",", "u1_", ",", "n1_", ",", "y_", ",", "c_"}], 
+   "]"}], ":=", 
+  RowBox[{
+   RowBox[{"-", 
+    SuperscriptBox[
+     RowBox[{"A", "[", 
+      RowBox[{"n1", ",", "u1", ",", "y", ",", "c"}], "]"}], "2"]}], " ", "y", 
+   " ", 
+   RowBox[{"\[CapitalDelta]", "[", 
+    RowBox[{"u2", ",", "n2", ",", "u1", ",", "n1"}], "]"}]}]}]}], "Input",
+ CellChangeTimes->{{3.697665363316646*^9, 3.697665514311874*^9}, {
+   3.697665547271125*^9, 3.697665608288578*^9}, {3.697665645023033*^9, 
+   3.697665708686022*^9}, {3.697666021152278*^9, 3.697666021352098*^9}, {
+   3.697666613984544*^9, 3.697666614265492*^9}, 3.69766665253856*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Determine the Siedel coefficient for the first surface", "Subsubsection",
+ CellChangeTimes->{{3.6976657337020273`*^9, 3.697665743164093*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"SI1", "=", 
+    RowBox[{"SI", "[", 
+     RowBox[{
+      RowBox[{"u", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], ",", " ", "nG", ",", " ", 
+      RowBox[{"u", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], ",", " ", "nA", ",", " ", 
+      RowBox[{"y", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], ",", 
+      RowBox[{"c", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], ")"}], " ", "//", 
+  "Framed"}]], "Input",
+ CellChangeTimes->{{3.697665746353116*^9, 3.697665747598652*^9}, {
+  3.697665885925332*^9, 3.697665919155218*^9}, {3.6976666924189873`*^9, 
+  3.697666713884205*^9}}],
+
+Cell[BoxData[
+ FrameBox[
+  TemplateBox[{
+   "0.0005141337553863697`","\"mm\"","millimeters","\"Millimeters\""},
+   "Quantity"],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{
+  3.697665920343194*^9, 3.697665990074336*^9, 3.6976660244712763`*^9, 
+   3.697666511463626*^9, {3.697666617092136*^9, 3.697666625141344*^9}, 
+   3.6976666554327393`*^9, 3.697666714262093*^9, 3.6976683701851873`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Determine the Siedel coefficient for the second surface", \
+"Subsubsection",
+ CellChangeTimes->{{3.697666127894314*^9, 3.6976661391412363`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"SI2", " ", "=", " ", 
+    RowBox[{"SI", "[", 
+     RowBox[{
+      RowBox[{"u", "[", 
+       RowBox[{"[", "3", "]"}], "]"}], ",", " ", "nA", ",", " ", 
+      RowBox[{"u", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], ",", " ", "nG", ",", " ", 
+      RowBox[{"y", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], ",", " ", 
+      RowBox[{"c", "[", 
+       RowBox[{"[", "2", "]"}], "]"}]}], "]"}]}], ")"}], "//", 
+  "Framed"}]], "Input",
+ CellChangeTimes->{{3.6976661427249727`*^9, 3.697666185598851*^9}, 
+   3.697666219411189*^9, {3.697666721170807*^9, 3.697666734766725*^9}}],
+
+Cell[BoxData[
+ FrameBox[
+  TemplateBox[{
+   "0.007574211106430621`","\"mm\"","millimeters","\"Millimeters\""},
+   "Quantity"],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{
+  3.6976662227150383`*^9, 3.697666511617667*^9, {3.6976666172388897`*^9, 
+   3.697666625294836*^9}, 3.697666655578323*^9, 3.697666735049271*^9, 
+   3.697668370345314*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Part 2.", "Subsection",
+ CellChangeTimes->{{3.697666685271559*^9, 3.697666688719585*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+The net spherical Siedel coefficient is the sum of the spherical Siedel \
+coefficients from each surface.\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.69766677309908*^9, 3.697666808038303*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"SIT", " ", "=", " ", 
+    RowBox[{"SI1", " ", "+", " ", "SI2"}]}], ")"}], " ", "//", 
+  "Framed"}]], "Input",
+ CellChangeTimes->{{3.697666821421218*^9, 3.697666824964645*^9}, {
+  3.69766686056081*^9, 3.697666874530199*^9}}],
+
+Cell[BoxData[
+ FrameBox[
+  TemplateBox[{
+   "0.00808834486181699`","\"mm\"","millimeters","\"Millimeters\""},
+   "Quantity"],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.697666874765492*^9, 3.697668370487805*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Part 3.", "Subsection",
+ CellChangeTimes->{{3.6976668799115334`*^9, 3.697666881575717*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+The wavefront aberration coefficient W040 is found from SI using the relation\
+\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6976670092142363`*^9, 3.6976670275795307`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Lambda]", "=", 
+   RowBox[{"0.587", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"\[Micro]m\"","micrometers",
+      "\"Micrometers\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"W040", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"SIT", " ", "/", " ", "8"}], " ", "/", " ", "\[Lambda]"}]}], 
+   ")"}], " ", "//", "Framed"}]}], "Input",
+ CellChangeTimes->{{3.697666968502143*^9, 3.697666975557365*^9}, {
+  3.697667033203948*^9, 3.697667058121879*^9}}],
+
+Cell[BoxData[
+ FrameBox["1.7223903027719316`",
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{{3.697667037498836*^9, 3.697667058359365*^9}, 
+   3.6976683706407537`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Part 4.", "Subsection",
+ CellChangeTimes->{{3.697667066347782*^9, 3.697667069235358*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Enter the given values into memory", "Subsubsection",
+ CellChangeTimes->{{3.697667083599863*^9, 3.6976671016080513`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"X", " ", "=", " ", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Y", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", " ", "=", " ", "4.3186"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d", " ", "=", " ", "8.6141"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EFL", " ", "=", " ", 
+   RowBox[{"400.66", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]", " ", "=", " ", 
+   RowBox[{"1", " ", "/", "EFL"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.697667103389889*^9, 3.697667150326791*^9}, {
+  3.697667441034069*^9, 3.697667465512515*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Now compute the thin lens Siedel coefficient", "Subsubsection",
+ CellChangeTimes->{{3.697667270851941*^9, 3.6976672804600077`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Sigma]I", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"c", " ", 
+     SuperscriptBox["Y", "2"]}], "+", "d"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"SItl", " ", "=", " ", 
+    RowBox[{
+     FractionBox["1", "4"], 
+     SuperscriptBox[
+      RowBox[{"y", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "4"], 
+     SuperscriptBox["\[Phi]", "3"], "\[Sigma]I"}]}], ")"}], "//", 
+  "Framed"}]}], "Input",
+ CellChangeTimes->{{3.697667412749969*^9, 3.6976674289842443`*^9}, {
+  3.697667484523445*^9, 3.697667514802814*^9}, {3.697667552929118*^9, 
+  3.697667561391184*^9}}],
+
+Cell[BoxData[
+ FrameBox[
+  TemplateBox[{
+   "0.008043058631959995`","\"mm\"","millimeters","\"Millimeters\""},
+   "Quantity"],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.697667516209689*^9, 3.697667561678303*^9, 
+  3.6976683708463984`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["and the wavefront aberration coefficient", "Subsubsection",
+ CellChangeTimes->{{3.697667584925798*^9, 3.697667598543899*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"SItl", " ", "/", " ", "8"}], " ", "/", " ", "\[Lambda]"}], ")"}],
+   " ", "//", "Framed"}]], "Input",
+ CellChangeTimes->{{3.69766761067933*^9, 3.6976676202721767`*^9}, {
+  3.6976683642054043`*^9, 3.697668386558734*^9}}],
+
+Cell[BoxData[
+ FrameBox["1.712746727419079`",
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{{3.69766761374825*^9, 3.697667620602388*^9}, {
+  3.697668365435506*^9, 3.697668387688789*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{959, 1025},
+WindowMargins->{{Automatic, 1957}, {0, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 137, 5, 156, "Chapter"],
+Cell[CellGroupData[{
+Cell[742, 31, 94, 1, 65, "Section"],
+Cell[CellGroupData[{
+Cell[861, 36, 95, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[981, 41, 150, 2, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[1156, 47, 1791, 43, 130, "Input"],
+Cell[2950, 92, 504, 12, 36, "Output"],
+Cell[3457, 106, 327, 7, 34, "Output"],
+Cell[3787, 115, 607, 15, 37, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4443, 136, 151, 2, 35, "Subsubsection"],
+Cell[4597, 140, 1151, 29, 101, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5785, 174, 147, 1, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[5957, 179, 637, 17, 34, "Input"],
+Cell[6597, 198, 399, 9, 45, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7045, 213, 150, 2, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[7220, 219, 621, 16, 34, "Input"],
+Cell[7844, 237, 352, 9, 45, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8257, 253, 95, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[8377, 258, 203, 4, 59, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[8605, 266, 275, 7, 32, "Input"],
+Cell[8883, 275, 224, 6, 45, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9168, 288, 97, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[9290, 293, 182, 4, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[9497, 301, 557, 15, 58, "Input"],
+Cell[10057, 318, 175, 4, 44, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10293, 329, 95, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[10413, 334, 127, 1, 35, "Subsubsection"],
+Cell[10543, 337, 775, 20, 149, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11355, 362, 137, 1, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[11517, 367, 629, 18, 78, "Input"],
+Cell[12149, 387, 252, 7, 45, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12450, 400, 131, 1, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[12606, 405, 284, 7, 32, "Input"],
+Cell[12893, 414, 194, 4, 44, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
