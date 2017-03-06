@@ -1,0 +1,483 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14327,        475]
+NotebookOptionsPosition[     12534,        405]
+NotebookOutlinePosition[     12874,        420]
+CellTagsIndexPosition[     12831,        417]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+EELE 582 Optical Design
+Roy Smart
+Homework 7\
+\>", "Chapter",
+ CellChangeTimes->{{3.697756179004006*^9, 3.6977562092172213`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1", "Section",
+ CellChangeTimes->{{3.6944541373803844`*^9, 3.69445414519079*^9}, {
+  3.697756216710113*^9, 3.697756218960169*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Part a.", "Subsection",
+ CellChangeTimes->{{3.694454160381736*^9, 3.694454162950019*^9}, {
+  3.697756227040122*^9, 3.697756228409112*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["We have the following definitions we need to use", "Subsubsection",
+ CellChangeTimes->{{3.694454171123433*^9, 3.6944541736360083`*^9}, {
+  3.697756242407295*^9, 3.6977563038754997`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Phi]1", "=", " ", 
+   RowBox[{"\[Phi]1a", " ", "+", " ", "\[Phi]1b"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]2", " ", "=", " ", 
+   RowBox[{"\[Phi]2a", " ", "+", " ", "\[Phi]2b"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]", "=", " ", 
+   FractionBox["1", "fE"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dp", " ", "=", "  ", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["\[Phi]1", "\[Phi]"]}], 
+    FractionBox["t", "n"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d1", " ", "=", " ", 
+   RowBox[{
+    FractionBox["\[Phi]2", "\[Phi]"], 
+    FractionBox["t", "n"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]1a", " ", "=", "  ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"n1", "-", "1"}], ")"}], " ", "/", "R1a"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]1b", " ", "=", "  ", 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"(", 
+      RowBox[{"n1", "-", "1"}], ")"}]}], "/", "R1b"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]2a", " ", "=", "  ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"n1", "-", "1"}], ")"}], "/", " ", "R2a"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]2b", " ", "=", "  ", 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"(", 
+      RowBox[{"n1", "-", "1"}], ")"}]}], "/", "R2b"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.694454277897414*^9, 3.69445440536779*^9}, {
+   3.694454453695631*^9, 3.694454606489663*^9}, {3.694454676311711*^9, 
+   3.694454864122608*^9}, {3.694454914593175*^9, 3.6944549300268726`*^9}, {
+   3.694454984980446*^9, 3.6944551687083445`*^9}, {3.694455420504151*^9, 
+   3.694455456207051*^9}, {3.6944559739098854`*^9, 3.694455979168208*^9}, {
+   3.6944563400698547`*^9, 3.694456349284777*^9}, {3.697756608607684*^9, 
+   3.697756636298582*^9}, 3.697757307210106*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Now solve the following system of equations for the curvature\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6977563274425993`*^9, 3.697756341771882*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"e1", "=", 
+   RowBox[{"\[Phi]", "\[Equal]", " ", 
+    RowBox[{"\[Phi]1", " ", "+", " ", "\[Phi]2", "-", 
+     RowBox[{
+      FractionBox["t", "n"], "\[Phi]1", " ", "\[Phi]2"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"e2", "=", 
+   RowBox[{"BFD", " ", "==", " ", 
+    RowBox[{"fE", " ", "+", " ", "dp"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"e3", " ", "=", " ", 
+   RowBox[{"R1a", " ", "\[Equal]", " ", 
+    RowBox[{"-", "R1b"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"e4", " ", "=", " ", 
+   RowBox[{"R2a", " ", "\[Equal]", 
+    RowBox[{"-", "R2b"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6944554250758133`*^9, 3.694455466536174*^9}, {
+  3.6944555432521925`*^9, 3.694455596440281*^9}, {3.694455630968692*^9, 
+  3.6944556328725986`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["The system the has the solution", "Subsubsection",
+ CellChangeTimes->{{3.6977563521317987`*^9, 3.697756357158824*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"radii", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"e1", ",", "e2", ",", "e3", ",", "e4"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"R1a", ",", " ", "R1b", ",", "R2a", ",", "R2b"}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.694455650500907*^9, 3.6944557155888977`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"R1a", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "fE"}], " ", "t"}], "+", 
+          RowBox[{"fE", " ", "n1", " ", "t"}]}], ")"}]}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"BFD", "-", "fE"}], ")"}], " ", "n"}]]}]}], ",", 
+    RowBox[{"R1b", "\[Rule]", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "fE"}], " ", "t"}], "+", 
+         RowBox[{"fE", " ", "n1", " ", "t"}]}], ")"}]}], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"BFD", "-", "fE"}], ")"}], " ", "n"}]]}], ",", 
+    RowBox[{"R2a", "\[Rule]", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "BFD"}], " ", "t"}], "+", 
+         RowBox[{"BFD", " ", "n1", " ", "t"}]}], ")"}]}], 
+      RowBox[{
+       RowBox[{"BFD", " ", "n"}], "-", 
+       RowBox[{"fE", " ", "n"}], "+", "t"}]]}], ",", 
+    RowBox[{"R2b", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "BFD"}], " ", "t"}], "+", 
+          RowBox[{"BFD", " ", "n1", " ", "t"}]}], ")"}]}], 
+       RowBox[{
+        RowBox[{"BFD", " ", "n"}], "-", 
+        RowBox[{"fE", " ", "n"}], "+", "t"}]]}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6944557163673162`*^9, {3.6944559841288958`*^9, 3.69445599506161*^9}, 
+   3.6944560731767983`*^9, 3.6944563647460804`*^9, 3.694457804905426*^9, 
+   3.697743669788209*^9, 3.697747379129805*^9, 3.69775704384182*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Plug in values for each of the variables", "Subsubsection",
+ CellChangeTimes->{{3.697756362596901*^9, 3.697756382936071*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"BFD", " ", "=", " ", 
+   RowBox[{"50", " ", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t", " ", "=", " ", 
+   RowBox[{"40", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d", " ", "=", 
+   RowBox[{"10", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fNum", " ", "=", " ", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fE", " ", "=", " ", 
+   RowBox[{"120", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n1", " ", "=", " ", "1.5168"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"n", "=", "1."}]}], "Input",
+ CellChangeTimes->{{3.694455785487901*^9, 3.694455970574275*^9}, {
+   3.694456353327365*^9, 3.6944563598696737`*^9}, {3.6944577998484097`*^9, 
+   3.6944578009013047`*^9}, {3.697743582942668*^9, 3.697743583077588*^9}, {
+   3.697743623950992*^9, 3.697743662820071*^9}, {3.697746910504327*^9, 
+   3.697746911708247*^9}, {3.697747371905278*^9, 3.697747376807172*^9}, 
+   3.6977561130548487`*^9}],
+
+Cell[BoxData["1.`"], "Output",
+ CellChangeTimes->{3.6977570439258623`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["The optical powers are", "Subsubsection",
+ CellChangeTimes->{{3.697756398990048*^9, 3.69775640592214*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"\[Phi]1", " ", "/.", " ", "radii"}], ")"}], "//", 
+  "Framed"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"\[Phi]2", " ", "/.", " ", "radii"}], ")"}], "//", 
+  "Framed"}]}], "Input",
+ CellChangeTimes->{{3.6977564103194532`*^9, 3.6977564428507*^9}}],
+
+Cell[BoxData[
+ FrameBox[
+  RowBox[{"{", 
+   TemplateBox[{
+    "0.014583333333333334`",RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+     "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+    "QuantityPostfix"], "}"}],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{{3.6977564209518642`*^9, 3.6977564430917683`*^9}, 
+   3.6977570440332327`*^9}],
+
+Cell[BoxData[
+ FrameBox[
+  RowBox[{"{", 
+   TemplateBox[{
+    RowBox[{"-", "0.014999999999999998`"}],
+     RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+     "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+    "QuantityPostfix"], "}"}],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{{3.6977564209518642`*^9, 3.6977564430917683`*^9}, 
+   3.697757044102412*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Part b.", "Subsection",
+ CellChangeTimes->{{3.697756453191349*^9, 3.697756455456318*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["The radii of curvature were found in the last part.", "Subsubsection",
+ CellChangeTimes->{{3.697756460919422*^9, 3.697756483308407*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"radii", " ", "//", "Framed"}]], "Input",
+ CellChangeTimes->{{3.694455946547989*^9, 3.694455949953066*^9}, {
+  3.6977564860055*^9, 3.697756488279808*^9}}],
+
+Cell[BoxData[
+ FrameBox[
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"R1a", "\[Rule]", 
+      TemplateBox[{
+       "70.87542857142856`","\"mm\"","millimeters","\"Millimeters\""},
+       "Quantity"]}], ",", 
+     RowBox[{"R1b", "\[Rule]", 
+      TemplateBox[{
+       RowBox[{"-", "70.87542857142856`"}],"\"mm\"","millimeters",
+        "\"Millimeters\""},
+       "Quantity"]}], ",", 
+     RowBox[{"R2a", "\[Rule]", 
+      TemplateBox[{
+       RowBox[{"-", "68.90666666666667`"}],"\"mm\"","millimeters",
+        "\"Millimeters\""},
+       "Quantity"]}], ",", 
+     RowBox[{"R2b", "\[Rule]", 
+      TemplateBox[{
+       "68.90666666666667`","\"mm\"","millimeters","\"Millimeters\""},
+       "Quantity"]}]}], "}"}], "}"}],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{
+  3.6944559506689053`*^9, {3.694455984175747*^9, 3.6944559951150093`*^9}, 
+   3.6944560732459183`*^9, 3.694456364846411*^9, 3.694457804997351*^9, 
+   3.697743669978216*^9, 3.697747379691781*^9, 3.697756488511611*^9, 
+   3.6977570442071*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2", "Section",
+ CellChangeTimes->{{3.6977565028006687`*^9, 3.697756506043475*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"d1", " ", "/.", " ", "radii"}], " ", "//", 
+  "Framed"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dp", " ", "/.", " ", "radii"}], " ", "//", "Framed"}]}], "Input",
+ CellChangeTimes->{{3.6977569261414347`*^9, 3.6977569557149153`*^9}, {
+  3.697757059156698*^9, 3.697757073413114*^9}, {3.697757314146047*^9, 
+  3.697757344027782*^9}}],
+
+Cell[BoxData[
+ FrameBox[
+  RowBox[{"{", 
+   TemplateBox[{
+    RowBox[{"-", "71.99999999999999`"}],"\"mm\"","millimeters",
+     "\"Millimeters\""},
+    "Quantity"], "}"}],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{{3.6977569345557117`*^9, 3.697756955998597*^9}, {
+  3.6977570442927437`*^9, 3.697757073658103*^9}, {3.697757314641913*^9, 
+  3.697757344975185*^9}}],
+
+Cell[BoxData[
+ FrameBox[
+  RowBox[{"{", 
+   TemplateBox[{
+    RowBox[{"-", "70.`"}],"\"mm\"","millimeters","\"Millimeters\""},
+    "Quantity"], "}"}],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{{3.6977569345557117`*^9, 3.697756955998597*^9}, {
+  3.6977570442927437`*^9, 3.697757073658103*^9}, {3.697757314641913*^9, 
+  3.697757345023705*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 1026},
+WindowMargins->{{2196, 1644}, {-114, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 139, 5, 156, "Chapter"],
+Cell[CellGroupData[{
+Cell[744, 31, 144, 2, 65, "Section"],
+Cell[CellGroupData[{
+Cell[913, 37, 144, 2, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[1082, 43, 192, 2, 35, "Subsubsection"],
+Cell[1277, 47, 73, 1, 32, "Input"],
+Cell[1353, 50, 1905, 54, 283, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3295, 109, 162, 3, 35, "Subsubsection"],
+Cell[3460, 114, 835, 22, 123, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4332, 141, 124, 1, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[4481, 146, 340, 9, 34, "Input"],
+Cell[4824, 157, 1746, 53, 53, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6619, 216, 131, 1, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[6775, 221, 1522, 39, 171, "Input"],
+Cell[8300, 262, 74, 1, 32, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8423, 269, 112, 1, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[8560, 274, 321, 9, 55, "Input"],
+Cell[8884, 285, 367, 9, 47, "Output"],
+Cell[9254, 296, 386, 10, 47, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9701, 313, 95, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[9821, 318, 142, 1, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[9988, 323, 177, 3, 32, "Input"],
+Cell[10168, 328, 1028, 28, 47, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11269, 364, 96, 1, 65, "Section"],
+Cell[CellGroupData[{
+Cell[11390, 369, 372, 8, 55, "Input"],
+Cell[11765, 379, 373, 10, 47, "Output"],
+Cell[12141, 391, 353, 9, 47, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9392,        304]
-NotebookOptionsPosition[      8370,        264]
-NotebookOutlinePosition[      8718,        279]
-CellTagsIndexPosition[      8675,        276]
+NotebookDataLength[     13313,        418]
+NotebookOptionsPosition[     11823,        362]
+NotebookOutlinePosition[     12182,        378]
+CellTagsIndexPosition[     12139,        375]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -188,7 +188,8 @@ Cell[BoxData[
         RowBox[{"fE", " ", "n"}], "+", "t"}]]}]}]}], "}"}], "}"}]], "Output",
  CellChangeTimes->{
   3.6944557163673162`*^9, {3.6944559841288958`*^9, 3.69445599506161*^9}, 
-   3.6944560731767983`*^9, 3.6944563647460804`*^9, 3.694457804905426*^9}]
+   3.6944560731767983`*^9, 3.6944563647460804`*^9, 3.694457804905426*^9, 
+   3.697743669788209*^9, 3.697747379129805*^9}]
 }, Open  ]],
 
 Cell["Plug in values for the remaining variables", "Text",
@@ -206,27 +207,40 @@ Cell[BoxData[{
      "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"t", " ", "=", " ", 
-   RowBox[{"50", 
+   RowBox[{"40", 
     TemplateBox[{
      InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
       "\"Millimeters\""},
      "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d", " ", "=", 
+   RowBox[{"10", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fNum", " ", "=", " ", "10"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"fE", " ", "=", " ", 
-   RowBox[{"200", 
+   RowBox[{"120", 
     TemplateBox[{
      InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
       "\"Millimeters\""},
      "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"n1", " ", "=", " ", "1.5185"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"n1", " ", "=", " ", "1.5168"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"n", "=", "1."}], "\[IndentingNewLine]"}], "Input",
  CellChangeTimes->{{3.694455785487901*^9, 3.694455970574275*^9}, {
   3.694456353327365*^9, 3.6944563598696737`*^9}, {3.6944577998484097`*^9, 
-  3.6944578009013047`*^9}}],
+  3.6944578009013047`*^9}, {3.697743582942668*^9, 3.697743583077588*^9}, {
+  3.697743623950992*^9, 3.697743662820071*^9}, {3.697746910504327*^9, 
+  3.697746911708247*^9}, {3.697747371905278*^9, 3.697747376807172*^9}}],
 
 Cell[BoxData["1.`"], "Output",
- CellChangeTimes->{3.6944563647929597`*^9, 3.694457804934188*^9}]
+ CellChangeTimes->{
+  3.6944563647929597`*^9, 3.694457804934188*^9, {3.697743664929638*^9, 
+   3.6977436698366613`*^9}, 3.697747379577211*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -240,31 +254,116 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"R1a", "\[Rule]", 
      TemplateBox[{
-      "69.13333333333334`","\"mm\"","millimeters","\"Millimeters\""},
+      "70.87542857142856`","\"mm\"","millimeters","\"Millimeters\""},
       "Quantity"]}], ",", 
     RowBox[{"R1b", "\[Rule]", 
      TemplateBox[{
-      RowBox[{"-", "69.13333333333334`"}],"\"mm\"","millimeters",
+      RowBox[{"-", "70.87542857142856`"}],"\"mm\"","millimeters",
        "\"Millimeters\""},
       "Quantity"]}], ",", 
     RowBox[{"R2a", "\[Rule]", 
      TemplateBox[{
-      RowBox[{"-", "25.925`"}],"\"mm\"","millimeters","\"Millimeters\""},
+      RowBox[{"-", "68.90666666666667`"}],"\"mm\"","millimeters",
+       "\"Millimeters\""},
       "Quantity"]}], ",", 
     RowBox[{"R2b", "\[Rule]", 
-     TemplateBox[{"25.925`","\"mm\"","millimeters","\"Millimeters\""},
+     TemplateBox[{
+      "68.90666666666667`","\"mm\"","millimeters","\"Millimeters\""},
       "Quantity"]}]}], "}"}], "}"}]], "Output",
  CellChangeTimes->{
   3.6944559506689053`*^9, {3.694455984175747*^9, 3.6944559951150093`*^9}, 
-   3.6944560732459183`*^9, 3.694456364846411*^9, 3.694457804997351*^9}]
+   3.6944560732459183`*^9, 3.694456364846411*^9, 3.694457804997351*^9, 
+   3.697743669978216*^9, 3.697747379691781*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"\[Phi]1a", " ", "/.", " ", "radii"}], "\[IndentingNewLine]", 
+ RowBox[{"\[Phi]1b", " ", "/.", " ", "radii"}], "\[IndentingNewLine]", 
+ RowBox[{"\[Phi]2a", "/.", " ", "radii"}], "\[IndentingNewLine]", 
+ RowBox[{"\[Phi]2b", "/.", " ", "radii"}]}], "Input",
+ CellChangeTimes->{{3.697743869644478*^9, 3.697743893392621*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  TemplateBox[{
+   "0.007291666666666667`",RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+    "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+   "QuantityPostfix"], "}"}]], "Output",
+ CellChangeTimes->{{3.697743886072092*^9, 3.6977438943512783`*^9}, 
+   3.6977473797959967`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  TemplateBox[{
+   "0.007291666666666667`",RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+    "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+   "QuantityPostfix"], "}"}]], "Output",
+ CellChangeTimes->{{3.697743886072092*^9, 3.6977438943512783`*^9}, 
+   3.697747379868347*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  TemplateBox[{
+   RowBox[{"-", "0.007499999999999999`"}],
+    RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],"reciprocal millimeters",
+    FractionBox["1", "\"Millimeters\""]},
+   "QuantityPostfix"], "}"}]], "Output",
+ CellChangeTimes->{{3.697743886072092*^9, 3.6977438943512783`*^9}, 
+   3.697747379943371*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  TemplateBox[{
+   RowBox[{"-", "0.007499999999999999`"}],
+    RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],"reciprocal millimeters",
+    FractionBox["1", "\"Millimeters\""]},
+   "QuantityPostfix"], "}"}]], "Output",
+ CellChangeTimes->{{3.697743886072092*^9, 3.6977438943512783`*^9}, 
+   3.697747380018505*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Phi]1a", "+", "\[Phi]1b"}], " ", "/.", " ", "radii"}]], "Input",
+ CellChangeTimes->{{3.6977442186837397`*^9, 3.697744218874131*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  TemplateBox[{
+   "0.014583333333333334`",RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+    "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+   "QuantityPostfix"], "}"}]], "Output",
+ CellChangeTimes->{3.697744219310101*^9, 3.697747380190514*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Phi]2a", "+", "\[Phi]2b"}], "/.", " ", "radii"}]], "Input",
+ CellChangeTimes->{{3.697744238034885*^9, 3.6977442381810503`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  TemplateBox[{
+   RowBox[{"-", "0.014999999999999998`"}],
+    RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],"reciprocal millimeters",
+    FractionBox["1", "\"Millimeters\""]},
+   "QuantityPostfix"], "}"}]], "Output",
+ CellChangeTimes->{3.6977442385671253`*^9, 3.697747380313676*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{759, 833},
-WindowMargins->{{Automatic, 295}, {-8, Automatic}},
-FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+WindowSize->{1920, 1026},
+WindowMargins->{{2196, 1644}, {-114, Automatic}},
+Magnification->2.,
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -279,29 +378,44 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 108, 1, 70, "Section"],
+Cell[580, 22, 108, 1, 129, "Section"],
 Cell[CellGroupData[{
-Cell[713, 27, 98, 1, 49, "Subsection"],
+Cell[713, 27, 98, 1, 88, "Subsection"],
 Cell[CellGroupData[{
-Cell[836, 32, 102, 1, 39, "Subsubsection"],
-Cell[941, 35, 176, 2, 30, "Text"],
-Cell[1120, 39, 73, 1, 30, "Input"],
-Cell[1196, 42, 1673, 48, 206, "Input"],
-Cell[2872, 92, 196, 4, 30, "Text"],
-Cell[3071, 98, 835, 22, 108, "Input"],
-Cell[3909, 122, 100, 1, 30, "Text"],
+Cell[836, 32, 102, 1, 70, "Subsubsection"],
+Cell[941, 35, 176, 2, 64, "Text"],
+Cell[1120, 39, 73, 1, 63, "Input"],
+Cell[1196, 42, 1673, 48, 445, "Input"],
+Cell[2872, 92, 196, 4, 64, "Text"],
+Cell[3071, 98, 835, 22, 229, "Input"],
+Cell[3909, 122, 100, 1, 64, "Text"],
 Cell[CellGroupData[{
-Cell[4034, 127, 340, 9, 30, "Input"],
-Cell[4377, 138, 1677, 52, 80, "Output"]
+Cell[4034, 127, 340, 9, 65, "Input"],
+Cell[4377, 138, 1725, 53, 124, "Output"]
 }, Open  ]],
-Cell[6069, 193, 128, 1, 30, "Text"],
+Cell[6117, 194, 128, 1, 64, "Text"],
 Cell[CellGroupData[{
-Cell[6222, 198, 1019, 27, 138, "Input"],
-Cell[7244, 227, 96, 1, 30, "Output"]
+Cell[6270, 199, 1513, 38, 364, "Input"],
+Cell[7786, 239, 173, 3, 91, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7377, 233, 97, 1, 30, "Input"],
-Cell[7477, 236, 841, 22, 38, "Output"]
+Cell[7996, 247, 97, 1, 63, "Input"],
+Cell[8096, 250, 926, 25, 98, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9059, 280, 345, 5, 190, "Input"],
+Cell[9407, 287, 325, 7, 98, "Output"],
+Cell[9735, 296, 323, 7, 98, "Output"],
+Cell[10061, 305, 343, 8, 98, "Output"],
+Cell[10407, 315, 343, 8, 98, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10787, 328, 169, 3, 63, "Input"],
+Cell[10959, 333, 293, 6, 98, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11289, 344, 164, 3, 63, "Input"],
+Cell[11456, 349, 315, 7, 98, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
