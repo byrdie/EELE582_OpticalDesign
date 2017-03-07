@@ -1,0 +1,59 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1150,         49]
+NotebookOptionsPosition[       834,         33]
+NotebookOutlinePosition[      1182,         48]
+CellTagsIndexPosition[      1139,         45]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+EELE 582 Optical Design
+Homework 6
+Roy Smart\
+\>", "Chapter",
+ CellChangeTimes->{{3.6975338259671526`*^9, 3.697533841278028*^9}}],
+
+Cell["Problem 2", "Section",
+ CellChangeTimes->{{3.6975338478384037`*^9, 3.697533851172594*^9}}]
+}, Open  ]]
+},
+WindowSize->{1920, 998},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 139, 5, 174, "Chapter"],
+Cell[722, 29, 96, 1, 70, "Section"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

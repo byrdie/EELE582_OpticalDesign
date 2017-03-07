@@ -1,0 +1,32 @@
+3. EFL = 199.987mm
+   BFD = 49.991mm
+   f/# = 15
+
+4. EFL = 121.031mm
+   BFD = 47.365mm
+   t = 40.000mm
+   Total track = 92.365mm
+   rms spot sizes = 64.022um, 81.732um, 95.310um
+   These spot sizes do not meet our design goal.
+   From the OPD plot, the dominant aberration appears to be coma
+   W040 = 2.288 waves
+   W131 = -2.318 waves
+   W222 = 1.693 waves
+   The ray fans and spots show features resembling coma	
+
+5. The front lens changed to a plano-convex lens, and the back lens has formed into a negative meniscus.
+   EFL = 119.974
+   BFD = 50.038
+   t = 40.000
+   rms spot sizes = 17.297, 28.166, 38.702
+   these spot sizes do not meet our design goal
+   astigmatism is the dominant aberration.
+   This is different from before because we did not optimize to reduce astigmatism.
+   W040 = 0.619
+   W131 = -0.254
+   W222 = 1.156
+   The ray fans exhibited a lot of astigmatism and spherical aberration.
+
+
+
+
