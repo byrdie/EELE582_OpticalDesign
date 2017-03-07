@@ -27,6 +27,48 @@
    W222 = 1.156
    The ray fans exhibited a lot of astigmatism and spherical aberration.
 
+6. Used the compensator solver to maintain distance of 40mm between lens elements. Used MXCA and MNCA
+   operands to control thickness of back of second lens surface, Was not very successful. Stop is inside the back 
+   lens.
+   EFL = 119.88
+   BFD = 50.201
+   t = 40.000
+   rms spot sizes = 25.400, 21.616, 57.199
+   Coma is most dominant. With the most obvious example being in the off axis rays.
+   W040 = -0.864
+   W131 = -1.080
+   W222 = 3.588
+   This solution isn't practical since the stop is inside the lens.
+   The rays fans show significant signs of spherical, coma and astigmatism
+
+7. Used the default merit function to inser TRAC operands. RMS radius now within specifications after optimization.
+   Stop now inside the front lens.
+   EFL = 119.996
+   BFL = 50.005
+   t = 40.000
+   rms spot sizes = 5.036, 14.334, 19.176
+   these spot sizes do meet our design goal
+   coma is dominant
+   W040 = 0.192
+   W131 = -1.655
+   W222 = 0.067
+   This solution is nearly practical. The stop is technically inside the lens, but could be moved out a small
+   amount to accomadate a physical stop.
+   The spot diagrams show coma and astigmatism.
+
+8. Moved stop to in front of first lens. made thickness of back of first lens 40mm and added MXCA and MNCA 
+   operands to keep the thickness between 10-60mm. After optimization, thikcness has increased to the max value.
+   Spot sizes descreased.
+   EFL = 119.999
+   BFD = 50.001
+   t = 60.000
+   rms spot sizes = 4.298 7.188 9.410
+   These spot sizes do meet our design goal.
+   Coma is the dominant aberration coefficient
+   W040 = 0.166
+   W131 = -0.651
+   W222 = 
+   
 
 
 
