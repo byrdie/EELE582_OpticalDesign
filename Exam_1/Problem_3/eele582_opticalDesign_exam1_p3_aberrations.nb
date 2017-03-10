@@ -1,0 +1,334 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8868,        326]
+NotebookOptionsPosition[      6938,        252]
+NotebookOutlinePosition[      7283,        267]
+CellTagsIndexPosition[      7240,        264]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Roy Smart
+EELE 582 Optical Design
+Exam 1\
+\>", "Chapter",
+ CellChangeTimes->{{3.6981365604884806`*^9, 3.698136600239754*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Problem 3", "Section",
+ CellChangeTimes->{{3.698136651292674*^9, 3.6981366530317736`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Part a.", "Subsection",
+ CellChangeTimes->{{3.6981366600241737`*^9, 3.6981366617472725`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["The expression for spherical aberration is ", "Subsubsection",
+ CellChangeTimes->{{3.6981367996101575`*^9, 3.698136807117587*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"spha", "[", 
+   RowBox[{"H_", ",", "\[Rho]_"}], "]"}], " ", ":=", " ", 
+  SuperscriptBox["\[Rho]", "4"]}]], "Input",
+ CellChangeTimes->{{3.6981368090766993`*^9, 3.698136863959838*^9}, 
+   3.6981370396678877`*^9, 3.698138196097032*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+The change in f/# from f/4 to f/2 is equivalent to doubling the diameter of \
+the pupil. This results in a\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6981370449611907`*^9, 3.698137091713865*^9}, {
+  3.698137343241252*^9, 3.6981373471594753`*^9}, {3.698137441276859*^9, 
+  3.698137446805175*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"R3a", " ", "=", " ", 
+    FractionBox[
+     RowBox[{"spha", "[", 
+      RowBox[{"H", ",", " ", 
+       RowBox[{"2", "\[Rho]"}]}], "]"}], 
+     RowBox[{"spha", "[", 
+      RowBox[{"H", ",", "\[Rho]"}], "]"}]]}], ")"}], "//", 
+  "Framed"}]], "Input",
+ CellChangeTimes->{{3.6981373587221365`*^9, 3.698137418277543*^9}}],
+
+Cell[BoxData[
+ FrameBox["16",
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.698137418547559*^9, 3.698138201943366*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+times increase in spherical aberration. This is because spherical aberration \
+depends on the pupil coordinate to the fourth power.\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6981374529105244`*^9, 3.6981375089847317`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Part b.", "Subsection",
+ CellChangeTimes->{{3.698137464182169*^9, 3.698137466167282*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+The change in field angle from 1 to 3 deg. is equivalent to changing the \
+image height by a factor of 3. This provides\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.698137788709731*^9, 3.698137830390115*^9}, {
+  3.6981378724665213`*^9, 3.698137882125074*^9}, {3.698138349847826*^9, 
+  3.6981383502588496`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"R3b", " ", "=", " ", 
+    FractionBox[
+     RowBox[{"spha", "[", 
+      RowBox[{
+       RowBox[{"3", "H"}], ",", "\[Rho]"}], "]"}], 
+     RowBox[{"spha", "[", 
+      RowBox[{"H", ",", "\[Rho]"}], "]"}]]}], ")"}], "//", 
+  "Framed"}]], "Input",
+ CellChangeTimes->{{3.698137833910316*^9, 3.6981378674872365`*^9}}],
+
+Cell[BoxData[
+ FrameBox["1",
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{{3.698137859894802*^9, 3.6981378678022547`*^9}, 
+   3.698138201953367*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+zero increase in spherical aberration, since spherical aberration is not \
+dependent on image height.\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.698137890745567*^9, 3.69813791738109*^9}, {
+  3.698138354204075*^9, 3.698138355009121*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Part c.", "Subsection",
+ CellChangeTimes->{{3.698137923023413*^9, 3.6981379245925026`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["The expression for coma is", "Subsubsection",
+ CellChangeTimes->{{3.698137935052101*^9, 3.698137939282343*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"coma", "[", 
+   RowBox[{"H_", ",", "\[Rho]_"}], "]"}], ":=", 
+  RowBox[{"H", " ", 
+   SuperscriptBox["\[Rho]", "3"], 
+   RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.6981381810731726`*^9, 3.69813822665578*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["As in part b. the image height changes by a factor of 3", \
+"Subsubsection",
+ CellChangeTimes->{{3.6981382360383167`*^9, 3.6981382565574903`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"R3c", " ", "=", " ", 
+    FractionBox[
+     RowBox[{"coma", "[", 
+      RowBox[{
+       RowBox[{"3", "H"}], ",", "\[Rho]"}], "]"}], 
+     RowBox[{"coma", "[", 
+      RowBox[{"H", ",", "\[Rho]"}], "]"}]]}], ")"}], "//", 
+  "Framed"}]], "Input",
+ CellChangeTimes->{{3.698138259768674*^9, 3.6981382895703783`*^9}}],
+
+Cell[BoxData[
+ FrameBox["3",
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{{3.6981382770666633`*^9, 3.698138289860395*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+which increases the coma by a factor of 3 since coma depends linearly on \
+image height\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.698138320146127*^9, 3.6981383403602834`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Part d.", "Subsection",
+ CellChangeTimes->{{3.6981383011350403`*^9, 3.698138307466402*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["The expression for astigmatism is", "Subsubsection",
+ CellChangeTimes->{{3.698138363971634*^9, 3.6981383706730175`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"astig", "[", 
+   RowBox[{"H_", ",", "\[Rho]_"}], "]"}], ":=", " ", 
+  RowBox[{
+   SuperscriptBox["H", "2"], 
+   SuperscriptBox["\[Rho]", "2"], 
+   SuperscriptBox[
+    RowBox[{"Cos", "[", "\[Phi]", "]"}], "2"]}]}]], "Input",
+ CellChangeTimes->{{3.6981383817416506`*^9, 3.6981384187097645`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Again, the image height changes by a factor of 3", "Subsubsection",
+ CellChangeTimes->{{3.6981384339456363`*^9, 3.6981384509566092`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"R3d", "=", 
+    FractionBox[
+     RowBox[{"astig", "[", 
+      RowBox[{
+       RowBox[{"3", "H"}], ",", "\[Rho]"}], "]"}], 
+     RowBox[{"astig", "[", 
+      RowBox[{"H", ",", "\[Rho]"}], "]"}]]}], ")"}], "//", 
+  "Framed"}]], "Input",
+ CellChangeTimes->{{3.6981384567329397`*^9, 3.698138484327518*^9}, {
+  3.698138550312292*^9, 3.6981385534164696`*^9}}],
+
+Cell[BoxData[
+ FrameBox["9",
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.6981384854075794`*^9, 3.698138553643482*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+which changes the astigmatism by a factor of nine since astigmatism is \
+quadratically dependent on image height.\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.698138489925838*^9, 3.698138533405325*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{944, 982},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 135, 5, 174, "Chapter"],
+Cell[CellGroupData[{
+Cell[740, 31, 96, 1, 70, "Section"],
+Cell[CellGroupData[{
+Cell[861, 36, 99, 1, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[985, 41, 136, 1, 39, "Subsubsection"],
+Cell[1124, 44, 269, 6, 30, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1430, 55, 307, 6, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[1762, 65, 368, 11, 53, "Input"],
+Cell[2133, 78, 128, 3, 42, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[2288, 85, 234, 4, 67, "Subsubsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2559, 94, 95, 1, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[2679, 99, 320, 6, 67, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[3024, 109, 363, 11, 53, "Input"],
+Cell[3390, 122, 157, 4, 42, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[3574, 130, 248, 5, 39, "Subsubsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3859, 140, 97, 1, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[3981, 145, 117, 1, 39, "Subsubsection"],
+Cell[4101, 148, 273, 7, 30, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4411, 160, 152, 2, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[4588, 166, 363, 11, 51, "Input"],
+Cell[4954, 179, 131, 3, 42, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[5112, 186, 188, 4, 39, "Subsubsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5337, 195, 97, 1, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[5459, 200, 126, 1, 39, "Subsubsection"],
+Cell[5588, 203, 328, 9, 30, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5953, 217, 143, 1, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[6121, 222, 406, 12, 53, "Input"],
+Cell[6530, 236, 129, 3, 42, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[6686, 243, 212, 4, 67, "Subsubsection"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
