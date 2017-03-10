@@ -67,8 +67,38 @@
    Coma is the dominant aberration coefficient
    W040 = 0.166
    W131 = -0.651
-   W222 = 
-   
+   W222 = -0.089
 
+9. We set the weight to zero on the DIFF operand to lift the restriction on the back focal length. As a result, the
+   BFD increased and the distance between the lenses decreased. The on-axis spot size got slightly larger, but the 
+   off-axis spot sizes are smaller by a few um
+   EFL = 120.000
+   BFD = 78.576
+   t = 28.668
+   total track = 112.243
+   rms spot sizes = 5.045, 5.741, 7.260
+   These spot sizes do indeed meet our design goal.
+   Coma is the dominant Siedel aberratio, but only slightly.
+   W040 = 0.191
+   W131 = 0.205
+   W222 = 0.154
+   This solution is practical. The lenses are reasonable, and not too thin. The total track is still less than the EFL,
+   but only barely.
+   
+10. First, I tried using the ISFN operand to minimize the f/#, but I could not understand how to make the 
+    clear semi-diameter of the stop a variable. So to do this I simply decremented the image space f number in the 
+    Aperature section of the system data editor by one and then optimized. Through this method, I was able to
+    reduce the f/# to f/6.5 while maintaining an off-axis spot size of less than 20um.
+    EFL = 119.999
+    BFD = 72.694
+    t = 36.399
+    total track = 114.093
+    rms spot sizes = 13.782, 15.179, 18.826
+    These spot sizes barely meet out criteria.
+    Spherical aberration is the dominant Siedel aberration
+    W040 = 0.727
+    W131 = 0.585
+    W222 = 0.702
+    This solution meets all of our design goals, and is about 30% faster than the initial design.
 
 
