@@ -1,0 +1,297 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7718,        287]
+NotebookOptionsPosition[      6038,        221]
+NotebookOutlinePosition[      6383,        236]
+CellTagsIndexPosition[      6340,        233]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+EELE 582 Optical Design
+Roy Smart
+Exam 1\
+\>", "Chapter",
+ CellChangeTimes->{{3.698100366369295*^9, 3.698100378227974*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.6981004459588475`*^9, 3.698100460937704*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1", "Section",
+ CellChangeTimes->{{3.6981003851243677`*^9, 3.69810038638244*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Part a.", "Subsection",
+ CellChangeTimes->{{3.698100403118397*^9, 3.6981004051925163`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Enter the given values into program memory", "Subsubsection",
+ CellChangeTimes->{{3.6981004101998024`*^9, 3.6981004201333704`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t", "=", 
+   RowBox[{"6", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n", " ", "=", " ", "1.5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"R1", " ", "=", " ", 
+   RowBox[{"60", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"R2", " ", "=", " ", 
+   RowBox[{"120", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.698100469887216*^9, 3.6981005065533133`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Find the curvature of the lenses", "Subsubsection",
+ CellChangeTimes->{{3.6981007526503897`*^9, 3.698100756549612*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"C1", " ", "=", " ", 
+   RowBox[{"1", "/", "R1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"C2", " ", "=", " ", 
+   RowBox[{"1", "/", "R2"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6981007589607506`*^9, 3.698100772895547*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Find the optical power of each surface", "Subsubsection",
+ CellChangeTimes->{{3.6981007836901646`*^9, 3.6981007897395105`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Phi]1", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"n", "-", "1"}], ")"}], "C1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]2", "=", 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"(", 
+      RowBox[{"n", "-", "1"}], ")"}]}], "C2"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6981007925496716`*^9, 3.698100813642878*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Find the optical power of the lens", "Subsubsection",
+ CellChangeTimes->{{3.698100822403379*^9, 3.6981008274206657`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Phi]", " ", "=", " ", 
+   RowBox[{"\[Phi]1", "+", "\[Phi]2", "-", 
+    RowBox[{
+     FractionBox["t", "n"], "\[Phi]1", " ", "\[Phi]2"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.698100829172766*^9, 3.698100871162168*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Evaluate the effective focal length", "Subsubsection",
+ CellChangeTimes->{{3.6981008772615166`*^9, 3.698100884237916*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"EFL", " ", "=", " ", 
+    RowBox[{"1", "/", "\[Phi]"}]}], ")"}], " ", "//", "Framed"}]], "Input",
+ CellChangeTimes->{{3.6981008872550883`*^9, 3.6981009102964063`*^9}}],
+
+Cell[BoxData[
+ FrameBox[
+  TemplateBox[{"232.25806451612902`","\"mm\"","millimeters","\"Millimeters\""},
+   "Quantity"],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{{3.698100901248889*^9, 3.6981009107744336`*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Part b.", "Subsection",
+ CellChangeTimes->{{3.698101030100259*^9, 3.698101032420391*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Calculate the distance from the back surface to the principal plane\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.698101152916283*^9, 3.698101168804192*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"dp", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["\[Phi]1", "\[Phi]"]}], 
+    FractionBox["t", "n"]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.698101171967373*^9, 3.698101206239333*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Calculate the back focal distance", "Subsubsection",
+ CellChangeTimes->{{3.6981012229402885`*^9, 3.698101231379771*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"BFD", " ", "=", " ", 
+    RowBox[{"EFL", " ", "+", " ", "dp"}]}], ")"}], " ", "//", 
+  "Framed"}]], "Input",
+ CellChangeTimes->{{3.6981012418013673`*^9, 3.698101259821398*^9}}],
+
+Cell[BoxData[
+ FrameBox[
+  TemplateBox[{"224.51612903225805`","\"mm\"","millimeters","\"Millimeters\""},
+   "Quantity"],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{{3.698101252323969*^9, 3.69810126003541*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Evaluate the distance from the back surface to the second principal plane\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6981012665447826`*^9, 3.6981012814066324`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dp", " ", "//", "Framed"}]], "Input",
+ CellChangeTimes->{{3.6981012954424353`*^9, 3.6981012983266*^9}}],
+
+Cell[BoxData[
+ FrameBox[
+  TemplateBox[{
+   RowBox[{"-", "7.741935483870967`"}],"\"mm\"","millimeters",
+    "\"Millimeters\""},
+   "Quantity"],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.698101298637618*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{944, 982},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 133, 5, 174, "Chapter"],
+Cell[716, 29, 141, 2, 30, "Input"],
+Cell[CellGroupData[{
+Cell[882, 35, 95, 1, 70, "Section"],
+Cell[CellGroupData[{
+Cell[1002, 40, 97, 1, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[1124, 45, 137, 1, 39, "Subsubsection"],
+Cell[1264, 48, 822, 24, 100, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2123, 77, 125, 1, 39, "Subsubsection"],
+Cell[2251, 80, 277, 7, 50, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2565, 92, 133, 1, 39, "Subsubsection"],
+Cell[2701, 95, 381, 12, 50, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3119, 112, 127, 1, 39, "Subsubsection"],
+Cell[3249, 115, 260, 6, 49, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3546, 126, 128, 1, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[3699, 131, 219, 5, 30, "Input"],
+Cell[3921, 138, 223, 5, 48, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4205, 150, 95, 1, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[4325, 155, 166, 3, 39, "Subsubsection"],
+Cell[4494, 160, 241, 7, 51, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4772, 172, 126, 1, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[4923, 177, 228, 6, 30, "Input"],
+Cell[5154, 185, 220, 5, 48, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5423, 196, 176, 3, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[5624, 203, 127, 2, 30, "Input"],
+Cell[5754, 207, 220, 7, 81, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

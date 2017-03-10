@@ -1,0 +1,189 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5410,        181]
+NotebookOptionsPosition[      4387,        141]
+NotebookOutlinePosition[      4907,        161]
+CellTagsIndexPosition[      4864,        158]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+EELE 582 Optical Design
+Roy Smart
+Homework 3\
+\>", "Chapter",
+ CellChangeTimes->{{3.6954945874191055`*^9, 3.6954946037366147`*^9}, {
+  3.6981022599616027`*^9, 3.698102263949831*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.6981023073743143`*^9, 3.698102316070812*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2", "Section",
+ CellChangeTimes->{{3.6981023002979097`*^9, 3.6981023033760858`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Save the focal length of each lens into program memory", "Subsubsection",
+ CellChangeTimes->{{3.6981023284765215`*^9, 3.698102341232251*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"fa", " ", "=", " ", 
+   RowBox[{"50", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fb", "=", 
+   RowBox[{"20", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6981023426053295`*^9, 3.6981023581282177`*^9}, {
+  3.698102492191886*^9, 3.698102492953929*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Find the optical power of each lens", "Subsubsection",
+ CellChangeTimes->{{3.6981024622391725`*^9, 3.6981024684335265`*^9}, {
+  3.6981025177523475`*^9, 3.6981025180333633`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Phi]a", " ", "=", " ", 
+   RowBox[{"1", " ", "/", " ", "fa"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]b", " ", "=", 
+   RowBox[{"1", "/", "fb"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6981024772070284`*^9, 3.698102502806493*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Assuming thin, equiconvex lenses, the optical power of each surface is then\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.698102579601885*^9, 3.6981026052283506`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Phi]1", " ", "=", " ", 
+   RowBox[{"\[Phi]2", "=", 
+    RowBox[{"\[Phi]a", " ", "/", "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"\[Phi]3", "=", 
+  RowBox[{"0", 
+   TemplateBox[{
+    InterpretationBox["\[InvisibleSpace]", 1],
+     RowBox[{"\"/\"", "\[InvisibleSpace]", "\"mm\""}],
+     "reciprocal millimeters",FractionBox["1", "\"Millimeters\""]},
+    "QuantityPostfix"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]4", " ", "=", " ", 
+   RowBox[{"\[Phi]5", " ", "=", " ", 
+    RowBox[{"\[Phi]b", " ", "/", "2"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6981026076204877`*^9, 3.6981026796336064`*^9}, {
+  3.698102838461691*^9, 3.698102872863659*^9}, {3.698102918590274*^9, 
+  3.69810292883386*^9}, {3.6981029821629105`*^9, 3.6981030032871184`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Save the thickness of each surface to memory", "Subsubsection",
+ CellChangeTimes->{{3.6981029519201803`*^9, 3.698102962700797*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t1", " ", "=", " ", 
+   RowBox[{"0", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t2", " ", "=", " ", 
+   RowBox[{"100", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t3", " ", "=", " ", 
+   RowBox[{"30", 
+    TemplateBox[{
+     InterpretationBox["\[InvisibleSpace]", 1],"\"mm\"","millimeters",
+      "\"Millimeters\""},
+     "Quantity"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"t4", ";"}]}], "Input",
+ CellChangeTimes->{{3.6981029641808815`*^9, 3.698102970163224*^9}, {
+  3.698103029747632*^9, 3.6981030608984137`*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 998},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+PrintingOptions->{"PaperOrientation"->"Portrait",
+"PaperSize"->{594.75, 842.25},
+"PostScriptOutputFile"->""},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 192, 6, 174, "Chapter"],
+Cell[775, 30, 141, 2, 30, "Input"],
+Cell[CellGroupData[{
+Cell[941, 36, 98, 1, 70, "Section"],
+Cell[CellGroupData[{
+Cell[1064, 41, 147, 1, 39, "Subsubsection"],
+Cell[1214, 44, 566, 16, 57, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1817, 65, 183, 2, 39, "Subsubsection"],
+Cell[2003, 69, 292, 7, 50, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2332, 81, 176, 3, 39, "Subsubsection"],
+Cell[2511, 86, 809, 18, 77, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3357, 109, 137, 1, 39, "Subsubsection"],
+Cell[3497, 112, 850, 24, 100, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
