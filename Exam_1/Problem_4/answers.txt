@@ -1,0 +1,16 @@
+3. a. iii.
+	EFL = 20.000
+	BFL = 30.000
+	f/# = 8.000
+3. c.
+	We used the marginal ray height solve (M-solve) to find the location
+	of the paraxial image plane. In the merit function, we used the EFFL
+	operand to optimize the focal length and OPTH/DIFF operands to 
+	optimize the back focal length.
+	EFL = 19.921
+	BFL = 30.052
+	t = 15.000
+	total track = 47.05223
+	rms spot sizes = 15.234, 72.627, 136.459
+	These spot sizes do not meet our design goal.
+
