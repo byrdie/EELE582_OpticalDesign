@@ -48,6 +48,68 @@
 	The ray fans show a pronounced cubic shape demonstrating spherical 
 	aberration. The off-axis fields show a small amount of atigmatism.
 4. e.
+	Here we used an operand that is new to me, the ABLT operand to constrain
+	the distance between the two lenses to be less than 30mm. As in the BFL
+	constraint, we used the OPTH and DIFF operands to compute the distance
+	between the two surfaces. We then applied the ABLT operand to the result
+	of the diff to ensure that the distance stayed less than 30mm. After 
+	optimization, we can see that putting the stop in between the lenses
+	certainly did help, reducing the RMS spot size at all three field angles.
+	EFL = 20.000
+	BFL = 30.000
+	t = 30.000
+	distance from first lens to stop = 23.287
+	distance from stop to second lens = 6.713
+	rms spot sizes = 8.236   11.091   11.219
+	These spot sizes do not meet our design goal.
+	Distortion remains the most dominant Siedel aberration.
+	W040 = 0.396
+	W131 = 1.127
+	W222 = -0.572
+	W311 = -12.7
+	This solution is practical, although the front lens could be too thin to
+	support its own weight.
+	The spot diagrams exhibit astigmatism in the off-axis fields. The intermediate
+	field appears to have more coma than the the outermost field.
+4. f.
+	In the merit function, we set the weight of the DIFF operand constraining the
+	BFL to zero. After running the optimizer, we were dissapointed to see that the
+	20 deg. field still did not meet the 10um spot size requirement. We then added 
+	a dummy image surface, to allow the optimizer to place the image plane at 
+	locations other than the paraxial focus. After rerunning the optimizer with the
+	DIS, the spot sizes were reduced significantly. The back focal length is still
+	greater than 25mm.
+	EFL = 20.000
+	BFL = 28.192
+	t = 25.118
+	track length = 55.3101
+	rms spot size = 4.077    5.191    6.906
+	These spot sizes do indeed meet our design goal
+	distortion is the most dominant Siedel aberration.
+	W040 = 0.387
+	W131 = 0.727
+	W222 = -0.172
+	W311 = -11.1
+	This solution seems practical, still think the lens is a little thin but its
+	most likely ok.
+	The on axis spots are almost perfect spherical aberration. The intermediate field
+	has pronounced coma in the y-direction. The outermost field is dominated by 
+	spherical and distortion.
+4. g. 	We hand-optimized the f/# by setting the aperture type to image space f/#, and 
+	slowly lower the aperture value while doing optimizations. Using this method, we
+	were able to achieve an f/# = 6.73. If we relax the spot size requirement to 15um
+	we can achieve an f/# of 5.54.
+	Distortion is consistently the biggest problem. This will make the images appear as
+	if they have been projected onto a sphere.
+
+
+
+
+
+
+
+
+
 
 	
 
