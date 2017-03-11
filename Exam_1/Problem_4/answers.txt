@@ -1,8 +1,8 @@
-3. a. iii.
+4. a. iii.
 	EFL = 20.000
 	BFL = 30.000
 	f/# = 8.000
-3. c.
+4. c.
 	We used the marginal ray height solve (M-solve) to find the location
 	of the paraxial image plane. In the merit function, we used the EFFL
 	operand to optimize the focal length and OPTH/DIFF operands to 
@@ -13,4 +13,42 @@
 	total track = 47.05223
 	rms spot sizes = 15.234, 72.627, 136.459
 	These spot sizes do not meet our design goal.
+	According to the merit function editor, the astigmatism is the largest
+	Siedel aberration.
+	W040 = 0.729
+	W131 = -1.165
+	W222 = 6.836
+	W311 = -5.304
+	This solution is practical to build, but it does not meet the 
+	requirements.
+	The ray fans have a cubic shape. The slope is larger in y than x
+	which is indicative of astigmatism. The ray fans are neither even
+	nor odd functions, which is indicative of coma.
+4. d.
+	During this optimization cycle, the optimizer was able to recover
+	the exact first order optical properites of the system. Furthermore
+	we were also able to shrink the off-axis spot sizes by a large
+	amount.
+	EFL = 20.000
+	BFL = 30.000
+	t = 15.000
+	rms spot sizes = 14.614, 14.544, 14.702
+	these spot sizes do not meet our design goal.
+	Distortion is the dominant Siedel aberration.
+	This is much different than before, the distortion got larger after
+	optimization.
+	The reason distortion is so large is that we are trying to image over
+	a wide field of view. Distortion is cubic in the field angle, so it will
+	be large. Furthermore, TRAC does not optimize for distortion.
+	W040 = 0.697
+	W131 = 1.002
+	W222 = -1.042
+	W311 = -9.941
+	This solution is practical. The lenses do not look too thin or too large.
+	The ray fans show a pronounced cubic shape demonstrating spherical 
+	aberration. The off-axis fields show a small amount of atigmatism.
+4. e.
+
+	
+
 
