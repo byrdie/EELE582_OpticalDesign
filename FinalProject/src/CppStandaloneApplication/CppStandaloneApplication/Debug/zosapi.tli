@@ -1,0 +1,17 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.10.25019.0 (0443665d).
+//
+// e:\users\byrdie\school\classes\eele582_opticaldesign\finalproject\src\cppstandaloneapplication\cppstandaloneapplication\debug\zosapi.tli
+//
+// Wrapper implementations for type library C:\\Program Files\\Zemax OpticStudio\\ZOS-API\\Libraries\\ZOSAPI.tlb
+// compiler-generated file created 04/23/17 at 11:30:26 - DO NOT EDIT!
+
+#pragma once
+
+//
+// dispinterface IZOSAPI_Events wrapper method implementations
+//
+
+inline HRESULT IZOSAPI_Events::SystemStatusChangedEvent ( long systemId, _bstr_t newStatus ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008", systemId, (BSTR)newStatus);
+}

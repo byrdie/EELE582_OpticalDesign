@@ -1,0 +1,4 @@
+﻿  CppStandaloneApplication.cpp
+e:\users\byrdie\school\classes\eele582_opticaldesign\finalproject\src\cppstandaloneapplication\cppstandaloneapplication\cppstandaloneapplication.cpp(210): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  CppStandaloneApplication.vcxproj -> E:\Users\byrdie\School\Classes\EELE582_OpticalDesign\FinalProject\src\CppStandaloneApplication\Debug\CppStandaloneApplication.exe
+  CppStandaloneApplication.vcxproj -> E:\Users\byrdie\School\Classes\EELE582_OpticalDesign\FinalProject\src\CppStandaloneApplication\Debug\CppStandaloneApplication.pdb (Partial PDB)

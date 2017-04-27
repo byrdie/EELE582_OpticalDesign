@@ -1,0 +1,62 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.10.25019.0 (0443665d).
+//
+// e:\users\byrdie\school\classes\eele582_opticaldesign\finalproject\src\cppstandaloneapplication\cppstandaloneapplication\debug\zosapi.tlh
+//
+// C++ source equivalent of type library C:\\Program Files\\Zemax OpticStudio\\ZOS-API\\Libraries\\ZOSAPI.tlb
+// compiler-generated file created 04/23/17 at 11:30:26 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace ZOSAPI {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("f66684d7-aafe-4a62-9156-ff7a7853f764"))
+/* LIBID */ __ZOSAPI;
+struct __declspec(uuid("f8ecf9da-2251-4a9b-9db8-89e0b6c0a968"))
+/* dispinterface */ IZOSAPI_Events;
+struct /* coclass */ ZOSAPI_Connection;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IZOSAPI_Events, __uuidof(IZOSAPI_Events));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("f8ecf9da-2251-4a9b-9db8-89e0b6c0a968"))
+IZOSAPI_Events : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT SystemStatusChangedEvent (
+        long systemId,
+        _bstr_t newStatus );
+};
+
+struct __declspec(uuid("b44b0a5f-7a80-45a5-8bc4-405ff36aeb02"))
+ZOSAPI_Connection;
+    // interface _Object
+    // [ default ] interface IZOSAPI_Connection
+    // [ default, source ] dispinterface IZOSAPI_Events
+
+//
+// Wrapper method implementations
+//
+
+#include "e:\users\byrdie\school\classes\eele582_opticaldesign\finalproject\src\cppstandaloneapplication\cppstandaloneapplication\debug\zosapi.tli"
+
+} // namespace ZOSAPI
+
+#pragma pack(pop)
