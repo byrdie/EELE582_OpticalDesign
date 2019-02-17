@@ -92,6 +92,8 @@ int _tmain(int argc, _TCHAR* argv[])
 			break;
 		}
 
+		
+
 		// Calculate the inner and outer radius of the circular obscuration
 		inner_rad = nth_radius(n, focal_len, wavlen);
 		n += dn;
@@ -108,6 +110,8 @@ int _tmain(int argc, _TCHAR* argv[])
 		// Create a new surface in the lens data editor
 		ILDERowPtr surf = lde->InsertNewSurfaceAt(i + 2);
 
+			ZOSAPI_Interfaces::SurfaceType_CoordinateBreak
+
 		// Create new circular obscuration
 		ISurfaceApertureTypePtr surf_apType = surf->ApertureData->CreateApertureTypeSettings(SurfaceApertureTypes_CircularObscuration);	
 
@@ -118,6 +122,8 @@ int _tmain(int argc, _TCHAR* argv[])
 
 		// Update the aperture data
 		surf->ApertureData->ChangeApertureTypeSettings(surf_apType);
+
+		surf->
 
 		surf->PhysicalOpticsData->UseRaysToPropagateToNextSurface = true;
 		//surf->PhysicalOpticsData->AutoResample = true;
